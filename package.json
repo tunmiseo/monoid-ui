@@ -1,0 +1,27 @@
+{
+  "name": "monoid-ui",
+  "theme": "ui",
+  "version": "0.0.1",
+  "description": "A monoid in the category of monoids. Monoidal structure induced by composition of endofunctional mixins (that are indeed, monoids).",
+  "keywords": [
+      "ui",
+      "theme",
+      "monad",
+      "monoid",
+      "foretold",
+      "fail",
+      "desperate",
+      "adaptive",
+      "trust",
+      "no one"
+  ],
+  "repository": "https://github.com/tunmiseo/monoid-ui",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.4.0 <2.0.0"
+  },
+  "devDependencies": {
+    "less": "^3.9.0",
+    "zeromq": "^5.1.0"
+  }
+}
