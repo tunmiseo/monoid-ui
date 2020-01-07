@@ -1,7 +1,7 @@
 {
   "name": "monoid-ui",
   "theme": "ui",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "A monoid in the category of monoids. Monoidal structure induced by composition of endofunctional mixins (that are indeed, monoids).",
   "keywords": [
       "ui",
