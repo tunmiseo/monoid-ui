@@ -1,94 +1,230 @@
 
-// UI Variables
-// -------------------
-
-// These are the official UI variables that every UI theme should define.
-// It allows other packages to match your theme.
-
-// Overrides: atom/static/variables/ui-variables.less
-
-// Try to edit some of the values below to see your theme change.
-// A good start is to change the color of the `@base-background-color` variable.
-
-
-// Text Colors
-@text-color:           hsl(0,0%,66%);
-@text-color-subtle:    hsl(0,0%,50%);
-@text-color-highlight: hsl(0,0%,94%);
-@text-color-selected:  hsl(0,0%,100%);
-
-@text-color-info:    hsl(219,  79%, 66%);
-@text-color-success: hsl(140,  44%, 62%);
-@text-color-warning: hsl( 36,  60%, 72%);
-@text-color-error:   hsl(  9, 100%, 64%);
-
-// Background colors
-@background-color-info:    hsl(208, 100%, 50%);
-@background-color-success: hsl(160,  70%, 36%);
-@background-color-warning: hsl(32,   60%, 50%);
-@background-color-error:   hsl(0,    70%, 50%);
-
-@background-color-highlight: lighten(@base-background-color, 5%);
-@background-color-selected:  lighten(@base-background-color, 10%);
-@app-background-color:       darken(@base-background-color, 5%);
-
-// Base colors
-@base-background-color: hsl(222,6%,22%);
-@base-border-color:     darken(@base-background-color, 8%);
-
-// Component colors
-@pane-item-background-color: @base-background-color;
-@pane-item-border-color:     @base-border-color;
-
-@input-background-color: @app-background-color;
-@input-border-color:     @base-border-color;
-
-@tool-panel-background-color: @base-background-color;
-@tool-panel-border-color:     @base-border-color;
-
-@inset-panel-background-color: lighten(@base-background-color, 4%);
-@inset-panel-border-color:     @base-border-color;
-
-@panel-heading-background-color: lighten(@base-background-color, 4%);
-@panel-heading-border-color:     @base-border-color;
-
-@overlay-background-color: lighten(@base-background-color, 5%);
-@overlay-border-color:     @base-border-color;
-
-@button-background-color:          lighten(@base-background-color, 10%);
-@button-background-color-hover:    lighten(@button-background-color, 12%);
-@button-background-color-selected: @button-background-color-hover;
-@button-border-color:              @base-border-color;
-
-@tab-bar-background-color:    @base-background-color;
-@tab-bar-border-color:        @base-border-color;
-@tab-background-color:        @tab-bar-background-color;
-@tab-background-color-active: lighten(@tab-bar-background-color, 10%);
-@tab-border-color:            @base-border-color;
-
-@tree-view-background-color: @base-background-color;
-@tree-view-border-color:     @base-border-color;
-
-// Site colors
-@ui-site-color-1: hsl(208, 100%, 50%); // blue
-@ui-site-color-2: hsl(160,  70%, 42%); // green
-@ui-site-color-3: hsl(32,   60%, 50%); // orange
-@ui-site-color-4: #D831B0;             // pink
-@ui-site-color-5: #EBDD5B;             // yellow
-
-// Sizes
-@font-size: 12px;
-@input-font-size: 14px;
-
-@disclosure-arrow-size: 12px;
-
-@component-padding: 10px;
-@component-icon-padding: 5px;
-@component-icon-size: 16px;
-@component-line-height: 25px;
-
-@tab-height: 30px;
 
 // Misc
-@component-border-radius: 2px;
-@font-family: '.SFNSText-Regular', 'SF UI Text', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
+
+@font: {
+  @size: {
+
+    @editor: 14px;
+    @app:calc(~"0.16vh + 0.9vw");
+  };
+  @family: 'SF Pro Text', system-ui, '.SFNSText-Regular', 'SF UI Text', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
+  @monospace: Inconsolata;
+  @primary: SF Pro Display;
+  @secondary: "SF Pro Text";
+  @icon: "Material Icons";
+  @display: "SFNS Display;"
+}
+
+@font-size                       : @font[@size][];
+@input-font-size                 : @font[@size][];
+@font-family                     : @font[@family];
+@timing-function                 : cubic-bezier(.4, 0, .2, 1);
+
+// Guide colors
+@wrap-guide-color                : transparent;
+@indent-guide-color              : transparent;
+@invisible-character-color       : transparent;
+
+// For find and replace markers
+
+@result-marker-color             : @light-gray;
+@result-marker-color-selected    : white;
+
+// Z Indexes
+@z: {
+  @drop                    : 100 !important;
+  @editor                  : 499;
+  @hover                   : 999 !important;
+  @item                    : @z[@editor];
+  @line                    : 800 !important;
+  @resize                  : @z[@hover];
+  @tab                     : 500;
+  @tab-bar                 : 500;
+}
+
+@red                             : hsla(350, 50%, 45%, 1);
+@gray                            : hsla(216, 8%, 24%, 1);
+@cyan                            : hsla(172, 39%, 64%, 1);
+@green                           : hsla(96, 59%, 35%, 1);
+@blue                            : hsla(198, 65%, 52%, 1);
+@orange                          : hsla(25, 66%, 62%, 1);
+@purple                          : hsla(236, 32%, 46%, 1);
+@dark-gray                       : hsla(220, 7%, 17%, 1);
+@light-gray                      : hsla(220, 7%, 59%, 1);
+@light-orange                    : hsla(40, 61%, 50%, 1);
+@very-dark-gray                  : hsla(210, 16%, 12%, 1);
+@very-light-gray                 : hsla(240, 15%, 78%, 1);
+@transparent: hsla(0,0%,0%,0);
+
+@cursor-color                    : @text-color-highlight;
+@selection-background            : @selection-background-color;
+@selection-background-color      : @background-color-selected;
+@selection-color                 : @text-color-selected;
+
+
+@text-color                      : hsla(220, 10%, 87%, 0.9);//hsla(220, 20%, 97.5%, 0.975);
+@text-shadow-color: darken(@base-background-color, 5%);
+@text-shadow: 0 0 0.25em @text-shadow-color, 0 0 0.15em @text-shadow-color;
+@text-color-pre                  : hsla(210, 15%, 75%, 1); //hsla(226, 15%, 95%, 0.9);
+@text-color-code                 : hsla(226, 15%, 95%, 0.9);
+@text-color-accent               : @text-color-highlight;
+@text-color-subtle               : hsla(0, 0%, 50%, 0.75);
+@text-color-selected             : hsla(0, 0%, 100%, 1);
+@text-color-highlight            : hsla(220, 1%, 97%, 1);
+@text-stroke-color-pre           : @text-color-pre;
+@text-shadow-color-pre           : fade(@text-color-pre, 60%);
+
+
+@text-color-info                 : hsla(220, 25%, 42%,0.75);
+@text-color-success              : hsla(175, 58%, 37%, 0.6); //hsl(140,  44%, 62%);
+@text-color-warning              : hsla(330, 40%, 49%, 0.65); //hsl( 36,  60%, 72%);
+@text-color-error                : hsla(345, 40%, 50%, 0.8); //hsl(  9, 100%, 64%);
+
+// Background colors
+@background-color-info           : hsla(208, 20%, 19%, 1);
+@background-color-success        : hsla(162, 28%, 19%, 1);
+@background-color-warning        : hsla(32, 20%, 19%, 1);
+@background-color-error          : hsla(0, 20%, 19%, 1);
+
+@background-color-info-hover     : hsl(228, 100%, 50%);
+@background-color-success-hover  : hsl(172, 58%, 42%);
+@background-color-warning-hover  : hsl(330, 60%, 50%);
+@background-color-error-hover    : hsl(345, 70%, 50%);
+
+// Base colors
+@app-border-color                : @transparent;
+@accent-color                    : @transparent;
+@accent-text-color                    : lighten(@base-color, 48%);
+@accent-border-color             : average(@accent-color, @base-color);
+@app-background-color            : fade(darken(@base-background-color, 2%), 45%);
+
+@base-background-color           : hsla(222, 7%, 7%, 0.3);
+@base-border-color               : @transparent;
+@base-color                      : lighten(spin(saturate(@base-background-color, 90%), 140deg), 15%);
+
+@background-color-highlight      : lighten(@base-background-color, 3%);
+@background-color-selected       : hsla(0, 0%, 0%, 0.1) !important;
+
+// Editor colors
+@editor-font-size                : var(--editor-font-size);
+@editor-text-color               : @very-light-gray;
+@editor-cursor-color             : white;
+@editor-selection-color          : lighten(@dark-gray, 10%);
+@editor-background-color         : fade(@base-background-color, 100%);
+@editor-background               :
+                                   linear-gradient(
+                                        to right,
+                                        transparent,
+                                        @editor-background-color,
+                                        transparent);
+
+@hr-border-color: @base-color;
+// Component colors
+@pane-item-background-color      : @transparent; //@app-background-color;
+@pane-item-border-color          : @app-border-color;
+
+@input-background-color          : @app-background-color;
+@input-border-color              : @base-border-color;
+
+@tool-panel-background-color     : @transparent;//@app-background-color;
+@tool-panel-border-color         : darken(@base-background-color, 0.5%);
+
+@inset-panel-background-color    : @transparent;//darken(@base-background-color, 1.5%);
+@inset-panel-border-color        : @base-border-color;
+
+@panel-heading-background-color  : @transparent;//darken(@base-background-color, 1.75%);
+@panel-heading-border-color      : @base-border-color;
+
+@overlay-background-color        : fade(@pane-item-background-color, 55.5%);
+@overlay-border-color            : @accent-color;
+
+@button-background-color         : @transparent;
+@button-background-color-hover   : @transparent;
+@button-background-color-selected: @button-background-color-hover;
+@button-border-color             : @base-border-color;
+
+@tab-background                  : @transparent;
+@tab-background-active           : hsla(0, 0%, 0%, 0);
+@tab-background-color            : hsla(0, 0%, 0%, 0);
+@tab-background-color-active     : hsla(0, 0%, 0%, 0);
+@tab-bar-background              : @tab-bar-background-color;
+@tab-bar-background-color        : hsla(0, 0%, 0%, 0);
+@tab-bar-background-hover-color  : fade(darken(@editor-background-color, 2.5%),95%);
+@tab-bar-background-hover        : linear-gradient(
+                                       to bottom,
+                                       fade(darken(@tab-bar-background-hover-color, 1.5%) , 25%) 30%,
+                                      @transparent);
+@tab-bar-background-unhover      : linear-gradient(
+                                        to bottom,
+                                        fade(darken(@tab-bar-background-hover-color, 1.5%) , 55%) 30%,
+                                       @transparent);
+@tab-bar-border-color            : transparent;
+@tab-border-color                : hsla(0, 0%, 0%, 0);
+// Gutter colors
+@gutter-text-color               : @text-color;
+@gutter-text-color-selected      : @gutter-text-color;
+@gutter-background-color         :  linear-gradient(
+                                        to right,
+                                        transparent,
+                                        @editor-background-color);
+@gutter-background-color         : @transparent;
+@gutter-background-color-selected: @editor-background-color;
+
+@editor-background-color         : fade(@base-background-color,20%);
+@tree-view-background-color      : @transparent;//@app-background-color;
+@tree-view-background            :  linear-gradient(
+                                        to right,
+                                        @editor-background-color,
+                                        transparent);
+@tree-view-border-color          : @base-border-color;
+
+// Site colors
+@ui-site-color-1                 : hsl(228, 70%, 40%); //
+@ui-site-color-2                 : hsl(202, 70%, 42%); //
+@ui-site-color-3                 : hsl(325, 60%, 50%);
+@ui-site-color-4                 : @accent-color;
+
+@ui-site-color-5                 : @base-color;
+
+// Sizes
+// @sz: ~"`setTimeout(1000), parseInt(getComputedStyle(document.querySelector('atom-workspace')).getPropertyValue('--editor-font-size').replace(/\s(.*)px/, ($0, $1) => $1))*0.1`vw";
+// @font-size-base                  : calc(~"0.85vh + 4px") !important;
+@font-size                       : calc(~"0.16vh + 0.9vw");
+// @font-size: `getComputedStyle(document.querySelector('atom-workspace')).getPropertyValue('--editor-font-size')`;
+@input-font-size                 : 14px;
+// @app-font-size                   : calc(~"var(--editor-font-size)*1") !important;
+@disclosure-arrow-size           : 12px;
+
+@component-padding               : 1em;
+@component-icon-padding          : 5px;
+@component-icon-size             : 16px;
+@component-line-height           : 1;
+@component-border-radius         : 2px;
+@tab-height                      : 22px;
+
+// Misc
+
+@font-family                     : Avenir, system-ui, '.SFNSText-Regular', 'SF UI Text', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
+@icon-font                       : "Material Icons";
+@display-font                    : "SFNS Display";
+@timing-function                 : cubic-bezier(.4, 0, .2, 1);
+
+// Guide colors
+@wrap-guide-color                : transparent;
+@indent-guide-color              : transparent;
+@invisible-character-color       : transparent;
+
+// For find and replace markers
+@result-marker-color             : @light-gray;
+@result-marker-color-selected    : white;
+
+// Z Indexes
+@tab-z-index                     : 500;
+@tab-bar-z-index                 : 500;
+@editor-z-index                  : 499;
+@line-z-index                    : 800 !important;
+@resize-z-index                  : @hover-z-index;
+@item-z-index                    : @editor-z-index;
+@hover-z-index                   : 999 !important;
+@drop-z-index                    : 100 !important;

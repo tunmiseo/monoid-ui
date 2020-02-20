@@ -1,0 +1,107 @@
+
+// Git
+// -------------------
+
+// Used to color git status
+
+.status          { color: @text-color; }
+.status-added    { color: @text-color-info; } // green
+.status-ignored  { color: @text-color-subtle; }  // faded
+.status-modified { color: @text-color-warning; } // orange
+.status-removed  { color: @text-color-error; }   // red
+.status-renamed  { color: @text-color-success; }    // blue
+
+
+atom-text-editor {
+	.gutter {
+		.line-number.git-line-modified {
+			color: 2px solid #de935f;
+			padding-left: calc(0.5em - 2px);
+		}
+		.line-number.git-line-added {
+			color: 2px solid #b5bd68;
+			padding-left: calc(0.5em - 2px);
+		}
+		.line-number.git-line-removed {
+			&:before {
+				position: absolute;
+				left: 0;
+				height: 0;
+				width: 0;
+				content: "";
+				border: solid transparent;
+				color: #cc6666;
+				border-width: 4px;
+				margin-top: -4px;
+				pointer-events: none;
+				bottom: -4px;
+			}
+		}
+		.line-number.git-previous-line-removed {
+			&:before {
+				position: absolute;
+				left: 0;
+				height: 0;
+				width: 0;
+				content: "";
+				border: solid transparent;
+				color: #cc6666;
+				border-width: 4px;
+				margin-top: -4px;
+				pointer-events: none;
+				top: 0;
+			}
+		}
+		.line-number {
+			padding-left: 0 !important;
+		}
+	}
+	.gutter.git-diff-icon {
+		.line-number {
+			border-left-width: 0;
+			padding-left: 1.4em;
+			&:before {
+				font-family: 'Octicons Regular';
+				src: url("icons/octicons.woff") format("woff");
+				font-weight: normal;
+				font-style: normal;
+				content: "";
+				display: inline-block;
+				position: absolute;
+				top: .2em;
+				left: .4em;
+				height: 0px;
+				width: 1em;
+				font-size: .75em;
+			}
+		}
+		.line-number.git-line-modified {
+			&:before {
+				content: "\f052";
+				color: #de935f;
+			}
+		}
+		.line-number.git-line-added {
+			&:before {
+				content: "\f05d";
+				color: #b5bd68;
+			}
+		}
+		.line-number.git-line-removed {
+			&:before {
+				border: none;
+				content: "\f0ca";
+				color: #cc6666;
+				top: 1em;
+			}
+		}
+		.line-number.git-previous-line-removed {
+			&:before {
+				border: none;
+				content: "\f0ca";
+				color: #cc6666;
+				top: 0;
+			}
+		}
+	}
+}

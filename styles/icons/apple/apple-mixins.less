@@ -1,0 +1,32 @@
+// main:../../../index.less
+@import (reference) "../main";
+
+.apple {
+  .icon(@size, @display: inline-flex, @source: octicons) {
+    @octicons: "Octicons Regular";
+    @material: "Material Icons";
+    @apple: "SF Pro Text";
+    font-family: @@source;
+    font-weight: normal;
+    font-style: normal;
+    display: @display;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    text-decoration: none;
+    .icon-size(@size);
+  }
+}
+
+.apple-icon(@name, @size: 16px) {
+  &::before {
+    .apple.icon(size, @source:apple);
+    content: @@name;
+  }
+}
+
+.mega-apple-icon(@name, @size: 32px) {
+  &::before {
+    .apple.icon(size, @source:apple);
+    content: @@name;
+  }
+}

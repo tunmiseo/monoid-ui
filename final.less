@@ -1,0 +1,20 @@
+@color: {
+    base     : hsla(213, 10%, 20%, 0.4);
+    text     : hsla(220, 10%, 87%, 0.9);
+    code     : hsla(226, 15%, 95%, 0.9);
+    pre      : hsla(210, 15%, 75%, 1);
+    info     : hsla(220, 25%, 42%,0.75);
+    success  : hsla(175, 58%, 37%, 0.6);
+    warning  : hsla(330, 40%, 49%, 0.65);
+    error    : hsla(345, 40%, 50%, 0.8);
+    selection: hsla(0, 0%, 100%, 1);
+};
+@selection: {
+    @background: {
+        @color: @background[@color][@selected];
+    }
+    color     : @text[@color][@selected];
+};
+@selection-background: @selection[background][];
+@selection-background-color: @selection[background][color];
+@selection-color: @selection[color];

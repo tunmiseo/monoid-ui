@@ -1,0 +1,31 @@
+// main: ../../../index.less
+.material {
+  .icon(@size, @display: inline-flex, @source: octicons) {
+    @octicons: "Octicons Regular";
+    @material: "Material Icons";
+    @system: "SF Pro Text";
+    font-family: @@source;
+    font-weight: normal;
+    font-style: normal;
+    display: @display;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    text-decoration: none;
+    .icon-size(@size);
+  }
+}
+
+.material-icon(@name, @size: 16px) {
+  &::before {
+    .material.icon(@size, @source:material);
+    content: @@name;
+  }
+}
+
+.mega-material-icon(@name, @size: 32px) {
+  &::before {
+    .material.icon(size, @source:material);
+    content: @@name;
+  }
+}
+// keep for backwards compatibility

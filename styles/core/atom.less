@@ -1,0 +1,112 @@
+
+:root {
+    background: transparent;
+    all       : unset;
+}
+// main: ../index.less
+@import (reference) "index";
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box; // Reset the box-sizing
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  contain: strict;
+}
+body,
+html {
+    font-family        : "SF Pro Display", system-ui;
+    body {
+        transition: .1s ease-in;
+        &:not(.is-blurred) {
+            filter+: contrast(1.05) brightness(0.975);
+        }
+    }
+    body.is-blurred {
+        transition: .1s ease-out;
+    }
+    max-height         : unset !important;
+    max-width          : 100vw !important;
+    overflow-y         : hidden;
+    overscroll-behavior: none;
+}
+html {
+  font-family: @font-family;
+  font-size: @font-size;
+  --font-size: @font-size;
+  line-height: calc(~"var(--font-size)*1.1"); // 20/14
+  color: @text-color;
+  //background-color: @app-background-color;
+}
+
+@font-size: calc(~"var(--editor-font-size) - (1vw/8 + 1vh/4.5)") !important;
+
+:root,
+html {
+    font-family: SF Pro Display;
+    background : hsla(210, 20%, 22.5%, 0.8) !important;
+    [class*="mask"],
+    body,
+    atom-dock,
+    atom-pane,
+    atom-panel,
+    atom-workspace,
+    atom-pane-container,
+    atom-panel-container,
+    .inset-panel,
+    .tool-panel,
+    [class*=atom],
+    .gutter {
+        border                : none !important;
+        background-color      : transparent;
+        background            : transparent;
+        -webkit-font-smoothing: antialiased;
+        text-rendering        : geometricPrecision;
+    }
+}
+atom {
+    &, &-workspace {
+        &, &-axis {
+            &.vertical, &.horizontal, & {
+                background:transparent;
+            }
+        }
+    }
+    &-pane,
+    &-panel,
+    &-dock {
+        &, &-container {
+            background:transparent;
+        }
+    }
+
+}
+
+atom-panel-container.bottom {
+    position  : fixed;
+    flex-grow : 1;
+    left:0 !important;
+    bottom    : 1.28rem;
+    min-width : -webkit-fill-available;
+    z-index   : 1000;
+    background: hsla(202, 18%, 20%, 0.1) !important;
+    // box-shadow: inset 0 0 4em hsla(194, 18%, 17%, 0.48) !important;
+    .editor-container {
+        atom-text-editor {
+            background        : hsla(210, 10%, 15%, 0.47) !important;
+            border-radius     : 2px;
+            -webkit-mask-image: linear-gradient(to bottom, hsla(0, 10%, 10%, 0.1),hsla(0, 10%, 10%, 0.7) 10%, hsl(0, 10%, 10%, 0.9),hsla(0, 0%, 0%, 0.7) 90%, hsla(0, 0%, 0%, 0.1));
+        }
+    }
+    button.btn {
+        font-size  : .85rem !important;
+        font-family: SF Display;
+        font-family: "SF Pro Display";
+    }
+}

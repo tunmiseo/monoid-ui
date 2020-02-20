@@ -1,0 +1,22 @@
+.gutter-container {
+    position: absolute !important;
+}
+
+atom-text-editor .gutter .line-number {
+    display: inline-flex;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+
+atom-text-editor .gutter-container .gutter {
+    position: absolute;
+    margin: 0 auto;
+}
+atom-text-editor  .gutter-container .gutter.line-numbers > .dummy ~ * {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    letter-spacing: -0.1em;
+
+}
+

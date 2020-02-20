@@ -1,0 +1,420 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>New Tab</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style/dash.css">
+    <style>
+        .bookmarks-placeholder {
+            height: 31px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: none;
+            background-color: #fff;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .bookmarks-placeholder {
+                background-color: rgb(50, 54, 57);
+            }
+        }
+    </style>
+    <style type="text/css" id="font-override"></style>
+    <style type="text/css">
+        .dashlinks {
+            flex: 0 0 auto;
+            order: 5
+        }
+
+        .dashlinks-icon-wrapper {
+            height: 100%;
+            min-height: 60px;
+            max-height: var(--max-height);
+            padding: 0 var(--side-padding);
+            display: inline-flex;
+            align-items: center;
+            opacity: .85;
+            cursor: pointer;
+            filter: drop-shadow(0 1px 5px rgba(0, 0, 0, .1));
+            transition: opacity .1s ease
+        }
+
+        .dashlinks-icon-wrapper:hover {
+            opacity: 1
+        }
+
+        .dashlinks-icon-wrapper:active {
+            opacity: .9;
+            transition-duration: 0s
+        }
+
+        .dashlinks .dashlinks-icon {
+            height: 18px;
+            width: 18px;
+            margin: 0;
+            fill: #fff !important;
+            vertical-align: -4%
+        }
+    </style>
+    <style type="text/css">
+        .search,
+        .search .search-input {
+            width: 100%;
+            max-width: var(--width);
+            position: relative;
+            cursor: pointer
+        }
+
+        .search {
+            --width: 250px;
+            --icon-size: 16px;
+            min-height: 60px;
+            max-height: var(--max-height);
+            min-width: 100px;
+            display: inline-block;
+            flex: 0 1 auto;
+            order: 6
+        }
+
+        .search .app-dash {
+            height: 100%;
+            padding: 0 var(--side-padding)
+        }
+
+        .search-form {
+            height: 100%;
+            position: relative
+        }
+
+        .search .search-input {
+            height: 100%;
+            padding: 0 32px 0 26px;
+            z-index: 2;
+            background: 0 0;
+            border: none;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            color: #fff;
+            line-height: 20px;
+            outline: 0
+        }
+
+        .search .icon-search,
+        .search-underline {
+            z-index: 1;
+            transition: opacity var(--a-fast) var(--a-curve);
+            position: absolute;
+            top: 50%
+        }
+
+        .search-input:focus {
+            cursor: text
+        }
+
+        .search-underline {
+            margin-top: 17px;
+            left: 0;
+            right: 0;
+            border-bottom: 2px solid #fff;
+            opacity: 0
+        }
+
+        .search:hover .search-underline {
+            opacity: .4
+        }
+
+        .search.active .search-underline {
+            opacity: 1
+        }
+
+        .search .icon-search {
+            margin-top: -10px;
+            left: 1px;
+            opacity: .85
+        }
+
+        .search.active .icon-search,
+        .search:hover .icon-search {
+            opacity: 1
+        }
+
+        .search .source {
+            height: 100%;
+            position: absolute;
+            right: 0;
+            z-index: 3;
+            display: flex;
+            opacity: 0;
+            transition: var(--a-fast) var(--a-curve)
+        }
+
+        .search:hover .source {
+            opacity: .65
+        }
+
+        .search.active .source {
+            opacity: 1
+        }
+
+        .search .source .icon {
+            --icon-size: 14px;
+            height: var(--icon-size);
+            width: var(--icon-size)
+        }
+
+        .search .source-toggle {
+            margin-right: -2px;
+            padding: 5px 2px;
+            align-self: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            border-radius: var(--toggle-size);
+            cursor: pointer;
+            outline: 0
+        }
+
+        .search .source-toggle .icons .icon {
+            display: none;
+            filter: brightness(100);
+            outline: 0
+        }
+
+        .search .source-toggle .icons .icon.active {
+            display: block
+        }
+
+        .search .source-toggle .icon-dropdown {
+            --size: 14px;
+            height: var(--size);
+            width: var(--size);
+            margin: 1px -2px;
+            display: block;
+            opacity: .5;
+            transition: .1s var(--a-curve)
+        }
+
+        .search .source-toggle:hover .icon-dropdown {
+            opacity: .8
+        }
+
+        .source.active .source-toggle .icon-dropdown {
+            opacity: 1;
+            transition-duration: 0
+        }
+
+        .search .source .dropdown {
+            margin-top: 29px;
+            padding: 4px 0;
+            left: auto;
+            top: 50%;
+            right: -8px
+        }
+
+        .search .dropdown.nipple-top-right:after {
+            right: 14px
+        }
+
+        .search .dropdown .search-provider {
+            outline: 0
+        }
+
+        .search .dropdown .heading {
+            margin-bottom: -1px;
+            padding: 8px 14px 0;
+            opacity: .75;
+            font-size: .625rem;
+            font-weight: 500;
+            text-transform: uppercase
+        }
+
+        .search .dropdown .dropdown-list-icon {
+            --icon-size: 15px
+        }
+
+        .search .dropdown .icon.active {
+            opacity: 1
+        }
+    </style>
+</head>
+
+<body class="f--default Chrome">
+    <div class="overlay loading-overlay">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000" class="loading-logo" data-test="loading-logo" style="display: none;" fill="#ccc">
+            <path
+                d="M500.024 1000.08C223.851 1000.08-.032 776.2-.032 500.024S223.851-.032 500.024-.032s500.056 223.883 500.056 500.056S776.2 1000.08 500.024 1000.08zm250.33-523.321a228.485 228.485 0 0 0-5.749-51.018 136.773 136.773 0 0 0-19.042-45.27 98.029 98.029 0 0 0-35.928-32.336Q667 335.925 633.946 335.92q-43.839 0-78.324 26.228t-48.863 75.09h-1.437a172.1 172.1 0 0 0-11.5-39.881 108.707 108.707 0 0 0-20.839-31.976 92.149 92.149 0 0 0-31.976-21.557q-19.048-7.9-44.911-7.9a120.578 120.578 0 0 0-74.372 25.509 147.849 147.849 0 0 0-29.1 30.539 141.892 141.892 0 0 0-20.12 40.959h-1.437q0-9.332-.359-21.2t-.718-24.431q-.37-12.562-.718-23.353-.371-10.779-1.078-17.964h-15.809q.708 7.191 1.438 17.964.707 10.779 1.077 22.635.354 11.856.719 23.353t.359 19.4v247.187h15.809V511.251q0-38.079 9.7-67.9 9.7-29.809 26.588-50.659A117.245 117.245 0 0 1 347.6 360.71a108.444 108.444 0 0 1 48.5-11.137q29.455 0 48.5 12.575a92.92 92.92 0 0 1 29.82 31.257 125.19 125.19 0 0 1 14.731 41.677 256.2 256.2 0 0 1 3.952 43.114v198.326h15.809V511.251q0-38.079 10.06-67.9 10.054-29.809 26.946-50.659a117.245 117.245 0 0 1 39.521-31.977 108.445 108.445 0 0 1 48.5-11.137q29.455 0 48.863 12.575a98.748 98.748 0 0 1 30.9 31.257 127.515 127.515 0 0 1 16.168 41.677 217.585 217.585 0 0 1 4.67 43.114v198.321h15.809V476.759z">
+            </path>
+        </svg>
+    </div>
+    <div id="main-view" style="display: block;">
+        <div class="bookmarks-bar bookmarks-placeholder"></div>
+        <ul id="background" class="background">
+            <li class="background-item fadein" style="background-image: url(&quot;https://farm5.staticflickr.com/4386/37060519312_4eb1782b87_k.jpg&quot;);"></li>
+        </ul>
+        <div class="background-overlay show"></div>
+        <div class="apps show-apps">
+            <div class="region full"></div>
+            <div class="region top-bar"></div>
+            <div class="top-row">
+                <div class="region top-left">
+                    <div id="dashlinks" class="dashlinks">
+                        <!--
+-->
+                    </div>
+                    <div id="search" class="app-container search">
+                        <div class="app-dash">
+                            <form class="search-form">
+                                <!--
+		--><span class="search-underline"></span>
+                                <!--
+		--><i class="dash-icon icon-search"></i>
+                                <!--
+		-->
+                                <div class="more source">
+                                    <div class="source-toggle" tabindex="0">
+                                        <div class="icons">
+                                            <img src="img/logo-google.svg" class="icon icon-google active" tabindex="0">
+                                            <img src="img/logo-bing.svg" class="icon icon-bing" tabindex="0">
+                                            <img src="img/logo-duckduckgo-white.svg" class="icon icon-duckduckgo" tabindex="0">
+                                        </div>
+                                        <img src="img/icon-down.svg" class="icon icon-dropdown">
+                                    </div>
+                                    <div class="dropdown more-dropdown dash-dropdown nipple-top-right">
+                                        <div class="heading">Search with</div>
+                                        <ul class="dropdown-list">
+                                            <li class="search-provider" data-provider="google" tabindex="1">
+                                                <span class="dropdown-list-icon-wrapper">
+                                                    <img src="img/logo-google.svg" class="dropdown-list-icon icon icon-google active">
+                                                </span>
+                                                <span class="dropdown-list-label">Google</span>
+                                            </li>
+                                            <li class="search-provider" data-provider="bing" tabindex="2">
+                                                <span class="dropdown-list-icon-wrapper">
+                                                    <img src="img/logo-bing.svg" class="dropdown-list-icon icon icon-bing">
+                                                </span>
+                                                <span class="dropdown-list-label">Bing</span>
+                                            </li>
+                                            <li class="search-provider" data-provider="duckduckgo" tabindex="3">
+                                                <span class="dropdown-list-icon-wrapper">
+                                                    <img src="img/logo-duckduckgo.svg" class="dropdown-list-icon icon icon-duckduckgo">
+                                                </span>
+                                                <span class="dropdown-list-label">DuckDuckGo</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--
+		--><input type="text" id="search-input" class="search-input" autocomplete="off">
+                                <!--
+	-->
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="region top-center"></div>
+                <div class="region top-right"></div>
+            </div>
+            <div class="region center">
+                <div class="app-container clock" style="">
+                    <div class="default-clock">
+                        <div class="time">1:39</div>
+                        <span class="format">PM</span>
+                    </div>
+                </div>
+                <div id="greeting" class="app-container has-dash-icon has-centered-3-col greeting transition" data-test="greeting" style=""><span class="side-col"></span>
+
+                    <span class="center-col content" data-content-type="greeting" data-test="content">
+                        <span class="message" data-test="message">Good afternoon, </span>
+                        <!--
+	--><span class="name-wrapper">
+                            <!--
+		--><span class="name no-contenteditable-fix" spellcheck="false" data-test="name">Tunmise</span>
+                            <!--
+		--><span class="punctuation">.</span>
+                        </span>
+                    </span>
+
+                    <span class="side-col">
+                        <span class="more more-dash" data-test="more-container">
+                            <div class="icon-wrapper dash-icon-wrapper more-toggle" data-test="more-toggle">
+                                <svg class="icon icon-ellipsis dash-icon more-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+                                    <path d="M8 22c-4.411 0-8 3.589-8 8s3.589 8 8 8 8-3.589 8-8-3.589-8-8-8zM52 22c-4.411 0-8 3.589-8 8s3.589 8 8 8 8-3.589 8-8-3.589-8-8-8zM30 22c-4.411 0-8 3.589-8 8s3.589 8 8 8 8-3.589 8-8-3.589-8-8-8z"></path>
+                                </svg>
+                            </div>
+                            <div class="app dropdown more-dropdown dash-dropdown nipple-top-left">
+                                <ul class="dropdown-list">
+                                    <li class="mantra-show" data-test="mantra-show">
+                                        <span class="dropdown-list-label">Show today’s mantra</span>
+                                    </li>
+                                    <li class="line"></li>
+                                    <li class="displayname-edit" data-test="displayname-edit">
+                                        <span class="dropdown-list-label">Edit your name</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </span>
+                    </span>
+                </div>
+            </div>
+            <div class="region center-below"></div>
+            <div class="region bottom"></div>
+            <div class="region bottom-right">
+                <div id="todo" class="app-container todo" data-test="todo" style="">
+                    <div class="app-wrapper app-placeholder nipple-bottom-right">
+                        <div class="app todo-app" style="height:70px; width:320px">
+                            <div class="app-placeholder-loading">
+                                <i class="loading-icon"></i>Loading...
+                            </div>
+                        </div>
+                    </div>
+                    <span class="app-dash toggle Todo-toggle" data-test="todo-app-dash">Todo</span>
+                </div>
+            </div>
+            <div class="region bottom-left" id="bottom-left">
+                <div id="settings" class="app-container settings" data-test="settings"><span class="app-dash toggle" data-test="settings-toggle"><svg class="toggle-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340.274 340.274">
+                            <path
+                                d="M293.629 127.806l-5.795-13.739c19.846-44.856 18.53-46.189 14.676-50.08l-25.353-24.77-2.516-2.12h-2.937c-1.549 0-6.173 0-44.712 17.48l-14.184-5.719c-18.332-45.444-20.212-45.444-25.58-45.444h-35.765c-5.362 0-7.446-.006-24.448 45.606l-14.123 5.734C86.848 43.757 71.574 38.19 67.452 38.19l-3.381.105-27.27 26.737c-4.138 3.891-5.582 5.263 15.402 49.425l-5.774 13.691C0 146.097 0 147.838 0 153.33v35.068c0 5.501 0 7.44 46.585 24.127l5.773 13.667c-19.843 44.832-18.51 46.178-14.655 50.032l25.353 24.8 2.522 2.168h2.951c1.525 0 6.092 0 44.685-17.516l14.159 5.758c18.335 45.438 20.218 45.427 25.598 45.427h35.771c5.47 0 7.41 0 24.463-45.589l14.195-5.74c26.014 11 41.253 16.585 45.349 16.585l3.404-.096 27.479-26.901c3.909-3.945 5.278-5.309-15.589-49.288l5.734-13.702c46.496-17.967 46.496-19.853 46.496-25.221V151.88c-.005-5.519-.005-7.446-46.644-24.074zM170.128 228.474c-32.798 0-59.504-26.187-59.504-58.364 0-32.153 26.707-58.315 59.504-58.315 32.78 0 59.43 26.168 59.43 58.315-.006 32.177-26.656 58.364-59.43 58.364z"
+                                fill="#FFF"></path>
+                        </svg></span></div>
+                <div>
+                    <div class="app-container app-dash background-info">
+                        <span class="background-info-title">Queenstown, New Zealand</span>
+                        <span class="background-info-source">
+                            <span class="background-info-source-link" data-url="https://www.instagram.com/p/BY3FkiEDmJP/?taken-by=tomeagar">Photo by Tom Eagar</span>
+                            <span class="control control-heart" style="display: inline-block;">
+                                <img src="img/icon-heart-empty.svg" data-src="img/icon-heart-empty.svg" class="icon icon-dash-heart-empty">
+                                <img src="img/icon-heart.svg" data-src="img/icon-heart.svg" class="icon icon-dash-heart">
+                            </span>
+                            <span class="control control-skip" title="Next Background" style="display: none;">
+                                <span class="icon-container">
+                                    <svg class="icon icon-skip" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 249.05 132.12">
+                                        <circle cx="115.5" cy="108.62" r="23"></circle>
+                                        <path d="M291.5,281A22.5,22.5,0,1,1,269,303.5,22.52,22.52,0,0,1,291.5,281m0-1A23.5,23.5,0,1,0,315,303.5,23.5,23.5,0,0,0,291.5,280Z" transform="translate(-176 -194.88)"></path>
+                                        <path class="arrow"
+                                            d="M399,257.5a135.18,135.18,0,0,0-41.16-42.17c-22.7-14.74-49.38-21.92-75.15-20.2a108.71,108.71,0,0,0-65.16,27c-19.91,17.5-33.76,41.79-41.18,72.19a13.52,13.52,0,0,0,9.92,16.32,13.66,13.66,0,0,0,3.21.38,13.51,13.51,0,0,0,13.11-10.3c6.07-24.92,17.1-44.54,32.76-58.31a82,82,0,0,1,49.13-20.32c20-1.33,40.81,4.32,58.65,15.9A108.07,108.07,0,0,1,374,268.51l-30,13.2,72.43,40.36,8.6-76Z"
+                                            transform="translate(-176 -194.88)"></path>
+                                    </svg>
+                                </span>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="overlay drop-overlay">
+            <p>Drop to upload backgrounds <span class="badge plus-badge">PLUS</span></p>
+        </div>
+    </div>
+    <script src="app/lib.js"></script>
+    <script src="app/main.js"></script>
+
+
+    <script type="text/javascript" async="" src="app/dash.js"></script>
+    <script type="text/javascript" async="" src="app/search.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,3684 @@
+:focus {
+  outline: none;
+}
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+figure {
+  margin: 0;
+}
+img {
+  vertical-align: middle;
+}
+.img-responsive {
+  display: block;
+  max-width: 100%;
+}
+hr {
+  margin-top: var(--editor-line-height);
+  margin-bottom: var(--editor-line-height);
+  border: 0;
+  border-top: 1px solid hsla(2, 97%, 22%, 0.3);
+}
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+body {
+  margin: 0;
+}
+audio,
+canvas,
+progress,
+video {
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+fieldset {
+  border: none;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  padding: 0;
+}
+optgroup {
+  font-weight: bold;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  contain: strict;
+}
+body {
+  color: hsla(220, 10%, 87%, 0.9);
+  text-shadow: 0 0 0.25em hsla(0, 0%, 52%, 0.33), 0 0 0.15em hsla(229, 30%, 86%, 0.23);
+}
+html {
+  font-family: Avenir, system-ui, '.SFNSText-Regular', 'SF UI Text', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
+  font-size: calc(0.16vh + 0.9vw);
+  line-height: 1.42857143;
+}
+:root {
+  background: transparent;
+  all: unset;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  contain: strict;
+}
+body,
+html {
+  font-family: "SF Pro Display", system-ui;
+  max-height: unset !important;
+  max-width: 100vw !important;
+  overflow-y: hidden;
+  overscroll-behavior: none;
+}
+body body,
+html body {
+  transition: 0.1s ease-in;
+}
+body body:not(.is-blurred),
+html body:not(.is-blurred) {
+  filter: contrast(1.05) brightness(0.975);
+}
+body body.is-blurred,
+html body.is-blurred {
+  transition: 0.1s ease-out;
+}
+html {
+  font-family: Avenir, system-ui, '.SFNSText-Regular', 'SF UI Text', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
+  font-size: calc(0.16vh + 0.9vw);
+  --font-size: calc(0.16vh + 0.9vw);
+  line-height: calc(var(--font-size)*1.1);
+  color: hsla(220, 10%, 87%, 0.9);
+}
+:root,
+html {
+  font-family: SF Pro Display;
+  background: hsla(210, 20%, 22.5%, 0.8) !important;
+}
+:root [class*="mask"],
+html [class*="mask"],
+:root body,
+html body,
+:root atom-dock,
+html atom-dock,
+:root atom-pane,
+html atom-pane,
+:root atom-panel,
+html atom-panel,
+:root atom-workspace,
+html atom-workspace,
+:root atom-pane-container,
+html atom-pane-container,
+:root atom-panel-container,
+html atom-panel-container,
+:root .inset-panel,
+html .inset-panel,
+:root .tool-panel,
+html .tool-panel,
+:root [class*=atom],
+html [class*=atom],
+:root .gutter,
+html .gutter {
+  border: none !important;
+  background-color: transparent;
+  background: transparent;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+atom.vertical,
+atom-workspace.vertical,
+atom-axis.vertical,
+atom-workspace-axis.vertical,
+atom.horizontal,
+atom-workspace.horizontal,
+atom-axis.horizontal,
+atom-workspace-axis.horizontal,
+atom,
+atom-workspace,
+atom-axis,
+atom-workspace-axis {
+  background: transparent;
+}
+atom-pane,
+atom-panel,
+atom-dock,
+atom-pane-container,
+atom-panel-container,
+atom-dock-container {
+  background: transparent;
+}
+atom-panel-container.bottom {
+  position: fixed;
+  flex-grow: 1;
+  left: 0 !important;
+  bottom: 1.28rem;
+  min-width: -webkit-fill-available;
+  z-index: 1000;
+  background: hsla(202, 18%, 20%, 0.1) !important;
+}
+atom-panel-container.bottom .editor-container atom-text-editor {
+  background: hsla(210, 10%, 15%, 0.47) !important;
+  border-radius: 2px;
+  -webkit-mask-image: linear-gradient(to bottom, hsla(0, 10%, 10%, 0.1), hsla(0, 10%, 10%, 0.7) 10%, hsl(0, 10%, 10%), hsla(0, 0%, 0%, 0.7) 90%, hsla(0, 0%, 0%, 0.1));
+}
+atom-panel-container.bottom button.btn {
+  font-size: 0.85rem !important;
+  font-family: SF Display;
+  font-family: "SF Pro Display";
+}
+.gutter-container {
+  position: absolute !important;
+}
+atom-text-editor .gutter .line-number {
+  display: inline-flex;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+atom-text-editor .gutter-container .gutter {
+  position: absolute;
+  margin: 0 auto;
+}
+atom-text-editor .gutter-container .gutter.line-numbers > .dummy ~ * {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  letter-spacing: -0.1em;
+}
+atom-text-editor {
+  background: hsla(213, 10%, 20%, 0.01) !important;
+}
+atom-text-editor .cursor-line {
+  background: hsla(213, 10%, 20%, 0.1) !important;
+}
+atom-text-editor,
+.editor {
+  line-height: 1.0625;
+  font-family: Inconsolata;
+  overscroll-behavior: none;
+  overflow-y: hidden;
+  box-sizing: border-box;
+}
+atom-text-editor:not([mini]),
+.editor:not([mini]) {
+  contain: layout;
+}
+@media screen and (min-height: 2160px) {
+  .icon-file-text::before {
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    line-height: 1.05;
+    -webkit-font-smoothing: antialiased;
+    text-decoration: none;
+    font-size: calc(var(--editor-font-size)*1.3) !important;
+    width: 1em;
+    height: 1em;
+    content: "\f011";
+  }
+  .terminal,
+  .terminal * {
+    font-size: calc(var(--editor-font-size)*4.5);
+  }
+}
+@media screen and (max-height: 768px) {
+  .icon-file-text::before {
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-size: calc(var(--editor-font-size)*.75);
+    font-style: normal;
+    font-weight: normal;
+    height: 1em;
+    line-height: 1;
+    text-decoration: none;
+    width: 1em;
+    content: "\f011";
+  }
+  .tab {
+    font-size: calc(var(--editor-font-size)*.7) !important;
+  }
+}
+@media screen and (min-height: 2160px) {
+  atom-text-editor {
+    font-size: calc(var(--editor-font-size)*1.15) !important;
+  }
+}
+@media screen and (min-height: 768px) and (max-height: 1800px) {
+  atom-text-editor {
+    font-size: calc(var(--editor-font-size)*0.85) !important;
+  }
+}
+@media screen and (max-height: 768px) {
+  atom-text-editor {
+    font-size: calc(var(--editor-font-size)*.65) !important;
+  }
+}
+@media screen and (max-height: 768px) {
+  .status-bar {
+    font-size: calc(var(--editor-font-size)*.65);
+  }
+}
+@media screen and (max-height: 768px) {
+  html {
+    font-size: calc(var(--editor-font-size)*1.2);
+  }
+}
+@media screen and (max-height: 768px) {
+  .tab {
+    font-size: calc(var(--editor-font-size)*0.7);
+  }
+}
+@media screen and (max-height: 768px) {
+  .terminal {
+    font-size: calc(var(--editor-font-size)*0.7);
+  }
+}
+@media screen and (max-height: 768px) {
+  .icon-file-text::before {
+    font-size: calc(var(--editor-font-size)*0.75);
+  }
+}
+.cursors,
+.cursors *,
+.cursors .blink-off {
+  color: hsla(0, 0%, 100%, 0.6) !important;
+  visibility: visible !important;
+}
+.cursors {
+  cursor: text;
+}
+input.hidden-input {
+  opacity: 1 !important;
+  visibility: visible !important;
+  width: 2px !important;
+}
+.platform-darwin atom-text-editor:not([mini]) {
+  cursor: -webkit-image-set(url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAAL0lEQVQoz2NgCD3x//9/BhBYBWdhgFVAiVW4JBFKGIa4AqD0//9D3pt4I4tAdAMAHTQ/j5Zom30AAAAASUVORK5CYII=') 1x, url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAAz0lEQVRIx2NgYGBY/R8I/vx5eelX3n82IJ9FxGf6tksvf/8FiTMQAcAGQMDvSwu09abffY8QYSAScNk45G198eX//yev73/4///701eh//kZSARckrNBRvz//+8+6ZohwCzjGNjdgQxkAg7B9WADeBjIBqtJCbhRA0YNoIkBSNmaPEMoNmA0FkYNoFKhapJ6FGyAH3nauaSmPfwI0v/3OukVi0CIZ+F25KrtYcx/CTIy0e+rC7R1Z4KMICVTQQ14feVXIbR695u14+Ir4gwAAD49E54wc1kWAAAAAElFTkSuQmCC') 2x) 5 8, text;
+}
+.platform-darwin atom-text-editor[mini] {
+  cursor: -webkit-image-set(url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAAL0lEQVQoz2NgCD3x//9/BhBYBWdhgFVAiVW4JBFKGIa4AqD0//9D3pt4I4tAdAMAHTQ/j5Zom30AAAAASUVORK5CYII=') 1x, url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAAz0lEQVRIx2NgYGBY/R8I/vx5eelX3n82IJ9FxGf6tksvf/8FiTMQAcAGQMDvSwu09abffY8QYSAScNk45G198eX//yev73/4///701eh//kZSARckrNBRvz//+8+6ZohwCzjGNjdgQxkAg7B9WADeBjIBqtJCbhRA0YNoIkBSNmaPEMoNmA0FkYNoFKhapJ6FGyAH3nauaSmPfwI0v/3OukVi0CIZ+F25KrtYcx/CTIy0e+rC7R1Z4KMICVTQQ14feVXIbR695u14+Ir4gwAAD49E54wc1kWAAAAAElFTkSuQmCC') 2x) 5 8, text;
+}
+atom-dock {
+  display: flex;
+  position: relative;
+}
+atom-dock .atom-dock-resize-handle.left {
+  position: absolute;
+  height: -webkit-fill-available;
+}
+atom-dock {
+  display: flex;
+  position: relative;
+}
+.atom-dock-inner {
+  display: flex;
+  align-items: center;
+}
+.atom-dock-inner.bottom {
+  width: 100%;
+}
+.atom-dock-inner.left,
+.atom-dock-inner.right {
+  height: 100%;
+}
+.atom-dock-inner.bottom {
+  flex-direction: column;
+}
+.atom-dock-inner.right {
+  right: 0;
+}
+.atom-dock-inner.bottom {
+  bottom: 0;
+}
+.atom-dock-inner.left {
+  left: 0;
+}
+.atom-dock-inner.right {
+  right: 0;
+}
+.atom-dock-inner.bottom {
+  bottom: 0;
+}
+.atom-dock-inner.left {
+  left: 0;
+}
+.atom-dock-inner:not(.atom-dock-open) {
+  position: absolute;
+  z-index: 10;
+}
+.atom-dock-mask {
+  position: relative;
+  background: none;
+  background-color: none;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  transition: width 0.2s ease-out, height 0.2s ease-out;
+}
+.atom-dock-content-wrapper {
+  position: absolute;
+  display: flex;
+  flex: 1;
+  align-items: stretch;
+  width: 100%;
+  height: 100%;
+  transition: width 0.1s linear, height 0.1s linear;
+  will-change: width;
+}
+.atom-dock-content-wrapper.right {
+  left: 0;
+}
+.atom-dock-content-wrapper.bottom {
+  top: 0;
+}
+.atom-dock-content-wrapper.left {
+  right: 0;
+}
+.atom-dock-content-wrapper.left {
+  flex-direction: row-reverse;
+}
+.atom-dock-content-wrapper.bottom {
+  flex-direction: column;
+}
+.atom-dock-content-wrapper.right {
+  flex-direction: row;
+}
+.atom-dock-toggle-button {
+  position: absolute;
+  overflow: hidden;
+  z-index: 11;
+  width: 50px;
+  height: 50px;
+}
+.atom-dock-toggle-button.right {
+  right: 100%;
+}
+.atom-dock-toggle-button.bottom {
+  bottom: 100%;
+}
+.atom-dock-toggle-button.left {
+  left: 100%;
+}
+.atom-dock-toggle-button.bottom {
+  height: 25px;
+}
+.atom-dock-toggle-button.left,
+.atom-dock-toggle-button.right {
+  width: 25px;
+}
+.atom-dock-toggle-button .atom-dock-toggle-button-inner {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  position: absolute;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  will-change: transform;
+}
+.atom-dock-toggle-button .atom-dock-toggle-button-inner.right {
+  left: 0;
+}
+.atom-dock-toggle-button .atom-dock-toggle-button-inner.bottom {
+  top: 0;
+}
+.atom-dock-toggle-button .atom-dock-toggle-button-inner.left {
+  right: 0;
+}
+.atom-dock-toggle-button:not(.atom-dock-toggle-button-visible) .atom-dock-toggle-button-inner.right {
+  transform: translateX(50%);
+}
+.atom-dock-toggle-button:not(.atom-dock-toggle-button-visible) .atom-dock-toggle-button-inner.bottom {
+  transform: translateY(50%);
+}
+.atom-dock-toggle-button:not(.atom-dock-toggle-button-visible) .atom-dock-toggle-button-inner.left {
+  transform: translateX(-50%);
+}
+.atom-dock-toggle-button .atom-dock-toggle-button-inner.right .icon {
+  transform: translateX(-8px);
+}
+.atom-dock-toggle-button .atom-dock-toggle-button-inner.bottom .icon {
+  transform: translateY(-8px);
+}
+.atom-dock-toggle-button .atom-dock-toggle-button-inner.left .icon {
+  transform: translateX(8px);
+}
+.atom-dock-toggle-button .icon {
+  transition: opacity 0.1s ease-in 0.1s;
+  opacity: 1;
+}
+.atom-dock-toggle-button .icon::before {
+  width: auto;
+  margin: 0;
+}
+.atom-dock-toggle-button:not(.atom-dock-toggle-button-visible) .icon {
+  opacity: 0;
+  transition: opacity 0.2s ease-out 0s;
+}
+.atom-dock-toggle-button .atom-dock-toggle-button-inner {
+  background-color: hsla(0, 0%, 0%, 0);
+  border: 1px solid hsla(0, 0%, 0%, 0);
+  transition: transform 0.2s ease-out 0s;
+}
+.atom-dock-toggle-button:not(.atom-dock-toggle-button-visible) {
+  pointer-events: none;
+}
+.atom-dock-toggle-button:not(.atom-dock-toggle-button-visible) .atom-dock-toggle-button-inner {
+  transition: transform 0.2s ease-out 0.1s;
+}
+.atom-dock-resize-handle {
+  width: auto;
+  height: auto;
+  flex: 0 0 auto;
+}
+.atom-dock-resize-handle.atom-dock-resize-handle-resizable.left,
+.atom-dock-resize-handle.atom-dock-resize-handle-resizable.right {
+  cursor: col-resize;
+}
+.atom-dock-resize-handle.atom-dock-resize-handle-resizable.bottom {
+  cursor: row-resize;
+}
+.atom-dock-resize-handle.left,
+.atom-dock-resize-handle.right {
+  width: 4px;
+}
+.atom-dock-resize-handle.bottom {
+  height: 4px;
+}
+.atom-dock-cursor-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+}
+.atom-dock-cursor-overlay.left,
+.atom-dock-cursor-overlay.right {
+  cursor: col-resize;
+}
+.atom-dock-cursor-overlay.bottom {
+  cursor: row-resize;
+}
+.atom-dock-cursor-overlay:not(.atom-dock-cursor-overlay-visible) {
+  display: none;
+}
+.dropdown-menu {
+  background-color: hsla(0, 0%, 0%, 0.555);
+  border-radius: 0;
+  border: 1px solid hsla(0, 0%, 0%, 0);
+  padding: 0;
+}
+.dropdown-menu > li > a:hover {
+  background-color: hsla(222, 7%, 10%, 0.3);
+}
+input.input-checkbox,
+input.input-radio,
+input.input-toggle {
+  margin-top: 0;
+}
+.input-label {
+  margin-bottom: 0;
+}
+.input-checkbox {
+  vertical-align: middle;
+  -webkit-appearance: none;
+  display: inline-block;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  font-size: inherit;
+  border-radius: 2px;
+  background-color: transparent;
+  transition: background-color 0.16s cubic-bezier(0.5, 0.15, 0.2, 1);
+}
+.input-checkbox.input-checkbox:focus {
+  outline: 0;
+}
+.input-checkbox:active {
+  background-color: hsla(222, 7%, 5%, 0.45);
+}
+.input-checkbox:after,
+.input-checkbox:before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 6.4px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: hsla(222, 7%, 7%, 0.3);
+  transform-origin: 0 0;
+  opacity: 0;
+  transition: transform 0.1s cubic-bezier(0.5, 0.15, 0.2, 1), opacity 0.1s cubic-bezier(0.5, 0.15, 0.2, 1);
+}
+.input-checkbox:before {
+  width: 5.28px;
+  transform: translate3d(0, 0, 0) rotate(225deg) scale(0);
+}
+.input-checkbox:after {
+  width: 10.56px;
+  margin: -1px;
+  transform: translate3d(0, 0, 0) rotate(-45deg) scale(0);
+  transition-delay: 0.05s;
+}
+.input-checkbox:checked {
+  background-color: hsl(208, 20%, 19%);
+}
+.input-checkbox:checked:active {
+  background-color: transparent;
+}
+.input-checkbox:checked:before {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) rotate(225deg) scale(1);
+  transition-delay: 0.05s;
+}
+.input-checkbox:checked:after {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) rotate(-45deg) scale(1);
+  transition-delay: 0;
+}
+.input-checkbox:indeterminate {
+  background-color: hsl(208, 20%, 19%);
+}
+.input-checkbox:indeterminate:active {
+  background-color: transparent;
+}
+.input-checkbox:indeterminate:after {
+  opacity: 1;
+  transform: translate3d(-2.24px, -4px, 0) rotate(0deg) scale(1);
+  transition-delay: 0;
+}
+.input-color {
+  vertical-align: middle;
+  -webkit-appearance: none;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid hsla(0, 0%, 0%, 0);
+  background-color: hsla(222, 7%, 5%, 0.45);
+}
+.input-color::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+.input-color::-webkit-color-swatch {
+  border: 1px solid hsla(0, 0%, 0%, 0.1);
+  border-radius: 50%;
+  transition: transform 0.16s cubic-bezier(0.5, 0.15, 0.2, 1);
+}
+.input-color::-webkit-color-swatch:active {
+  transition-duration: 0s;
+  transform: scale(0.9);
+}
+.input-label .input-checkbox,
+.input-label .input-radio,
+.input-label .input-toggle {
+  margin-top: -0.25em;
+  margin-right: 1ch;
+}
+.input-number {
+  vertical-align: middle;
+  padding: 0.25em 0.4em;
+  line-height: 1.5;
+  border-radius: 2px;
+  border: 1px solid hsla(0, 0%, 0%, 0);
+  background-color: hsla(222, 7%, 5%, 0.45);
+  position: relative;
+  width: auto;
+}
+.input-number::-webkit-input-placeholder {
+  color: hsla(0, 0%, 50%, 0.75);
+}
+.input-number:invalid {
+  color: hsla(345, 40%, 50%, 0.8);
+  border-color: hsl(0, 20%, 19%);
+}
+.platform-darwin .input-number {
+  padding-right: 1.2em;
+}
+.platform-darwin .input-number::-webkit-inner-spin-button {
+  -webkit-appearance: menulist-button;
+  position: absolute;
+  top: 1px;
+  bottom: 1px;
+  right: 1px;
+  width: calc(0.6em + 9px);
+  outline: 1px solid hsla(222, 7%, 5%, 0.45);
+  outline-offset: -1px;
+  border-right: 0.2em solid hsla(222, 7%, 10%, 0.3);
+  background-color: hsla(222, 7%, 10%, 0.3);
+  transition: transform 0.16s cubic-bezier(0.5, 0.15, 0.2, 1);
+}
+.platform-darwin .input-number::-webkit-inner-spin-button:active {
+  transform: scale(0.9);
+  transition-duration: 0s;
+}
+.input-radio {
+  vertical-align: middle;
+  -webkit-appearance: none;
+  display: inline-block;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  font-size: inherit;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: background-color 0.16s cubic-bezier(0.5, 0.15, 0.2, 1);
+}
+.input-radio:before {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  border: 5.33333333px solid transparent;
+  background-clip: content-box;
+  background-color: hsla(222, 7%, 7%, 0.3);
+  transform: scale(0);
+  transition: transform 0.1s cubic-bezier(0.5, 0.15, 0.2, 1);
+}
+.input-radio.input-radio:focus {
+  outline: none;
+}
+.input-radio:active {
+  background-color: hsl(208, 20%, 19%);
+}
+.input-radio:checked {
+  background-color: hsl(208, 20%, 19%);
+}
+.input-radio:checked:before {
+  transform: scale(1);
+}
+.input-range {
+  -webkit-appearance: none;
+  margin: 2px 0;
+  height: 4px;
+  border-radius: 2px;
+  background-color: transparent;
+}
+.input-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: hsl(208, 20%, 19%);
+  transition: transform 0.16s;
+}
+.input-range::-webkit-slider-thumb:active {
+  transition-duration: 0s;
+  transform: scale(0.9);
+}
+.input-search {
+  display: block;
+  width: 100%;
+  padding: 0.25em 0.4em;
+  line-height: 1.5;
+  border-radius: 2px;
+  border: 1px solid hsla(0, 0%, 0%, 0);
+  background-color: hsla(222, 7%, 5%, 0.45);
+}
+.input-search.input-search::-webkit-search-cancel-button {
+  -webkit-appearance: searchfield-cancel-button;
+}
+.input-search::-webkit-input-placeholder {
+  color: hsla(0, 0%, 50%, 0.75);
+}
+.input-search:invalid {
+  color: hsla(345, 40%, 50%, 0.8);
+  border-color: hsl(0, 20%, 19%);
+}
+.input-select {
+  vertical-align: middle;
+  height: calc(2em + 2px);
+  border-radius: 2px;
+  border: 1px solid hsla(0, 0%, 0%, 0);
+  background-color: hsla(0, 0%, 0%, 0);
+}
+.input-text {
+  display: block;
+  width: 100%;
+  padding: 0.25em 0.4em;
+  line-height: 1.5;
+  border-radius: 2px;
+  border: 1px solid hsla(0, 0%, 0%, 0);
+  background-color: hsla(222, 7%, 5%, 0.45);
+}
+.input-text::-webkit-input-placeholder {
+  color: hsla(0, 0%, 50%, 0.75);
+}
+.input-text:invalid {
+  color: hsla(345, 40%, 50%, 0.8);
+  border-color: hsl(0, 20%, 19%);
+}
+.input-textarea {
+  display: block;
+  width: 100%;
+  padding: 0.25em 0.4em;
+  line-height: 1.5;
+  border-radius: 2px;
+  border: 1px solid hsla(0, 0%, 0%, 0);
+  background-color: hsla(222, 7%, 5%, 0.45);
+}
+.input-textarea::-webkit-input-placeholder {
+  color: hsla(0, 0%, 50%, 0.75);
+}
+.input-textarea:invalid {
+  color: hsla(345, 40%, 50%, 0.8);
+  border-color: hsl(0, 20%, 19%);
+}
+.input-toggle {
+  -webkit-appearance: none;
+  display: inline-block;
+  position: relative;
+  font-size: inherit;
+  width: 32px;
+  height: 16px;
+  vertical-align: middle;
+  border-radius: 2em;
+  background-color: transparent;
+  transition: background-color 0.2s cubic-bezier(0.5, 0.15, 0.2, 1);
+}
+.input-toggle.input-toggle:focus {
+  outline: 0;
+}
+.input-toggle:checked {
+  background-color: hsla(222, 7%, 5%, 0.45);
+}
+.input-toggle:before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: inherit;
+  border: 4px solid transparent;
+  background-clip: content-box;
+  background-color: hsla(222, 7%, 7%, 0.3);
+  transition: transform 0.2s cubic-bezier(0.5, 0.15, 0.2, 1);
+}
+.input-toggle:active:before {
+  opacity: 0.5;
+}
+.input-toggle:checked:before {
+  transform: translate3d(100%, 0, 0);
+}
+.list-group ol {
+  margin-left: 2rem !important;
+}
+.list-group .icon::before {
+  margin-right: 1px;
+  top: 50%;
+  translate: 0 -50%;
+  display: inline-flex;
+  vertical-align: middle;
+  align-items: center;
+  line-height: 15px;
+  height: 15px;
+}
+.list-group .selected::before {
+  height: 15px;
+  border-radius: 0.15em;
+  background-color: hsla(220, 6%, 32%, 0.8);
+  filter: brightness(2);
+}
+.list-group.list-nested-item > .list-item {
+  white-space: nowrap;
+  line-height: 15px;
+}
+.list-group:not(.list-nested-item) {
+  white-space: nowrap;
+  line-height: 15px;
+}
+.list-group li {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+.list-tree {
+  padding-left: 0;
+  padding-right: 0;
+  color: hsla(220, 10%, 87%, 0.9);
+}
+[class*=tree-view-panes] .list-tree,
+[is=tree-view-directory] .list-tree {
+  margin-left: 0 !important;
+}
+.list-tree .icon::before {
+  top: 50%;
+  translate: 0 -50%;
+  display: inline-flex;
+  vertical-align: middle;
+  align-items: center;
+  line-height: 15px;
+  height: 15px;
+}
+.list-tree .icon::before {
+  margin-right: 1px;
+  top: 50%;
+  translate: 0 -50%;
+  display: inline-flex;
+  vertical-align: middle;
+  align-items: center;
+  line-height: 15px;
+  height: 15px;
+}
+.list-tree .selected::before {
+  height: 15px;
+  border-radius: 0.15em;
+  background-color: hsla(220, 6%, 32%, 0.8);
+  filter: brightness(2);
+}
+.list-tree.list-nested-item > .list-item {
+  white-space: nowrap;
+  line-height: 15px;
+}
+.list-tree:not(.list-nested-item) {
+  white-space: nowrap;
+  line-height: 15px;
+}
+.list-tree li {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+.list-tree li > .header.list-item.project-root-header {
+  line-height: 15px;
+  height: 15px;
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+}
+.list-tree li > .header.list-item.project-root-header span {
+  line-height: 15;
+  height: 15px;
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+}
+.select-list li {
+  padding: 1px 2px;
+}
+.select-list .status {
+  float: right;
+}
+.select-list.popover-list {
+  padding: 1px;
+  border-radius: 2px;
+  background-color: hsla(0, 0%, 0%, 0.555);
+  box-shadow: 0 2px 8px 1px hsla(0, 0%, 0%, 0.3);
+}
+.select-list.popover-list .list-group {
+  margin-top: 1px;
+}
+.select-list.popover-list .list-group li {
+  padding-left: 1px;
+}
+.expanded .list-item-pane-header + ol .file span,
+.list-item + ol > li.expanded .file span {
+  display: block;
+}
+.expanded .list-item-pane-header + ol .header span,
+.list-item + ol > li.expanded .header span {
+  display: inline-block;
+}
+.list-item + ol > li:nth-child(1)"\f102",
+.list-item + ol > li:nth-child(1).directory,
+.list-item + ol > li:nth-child(1).header {
+  transition: all 0.2s ease;
+}
+.list-item + ol > li:nth-child(1)"\f102",
+.list-item + ol > li:nth-child(1).directory,
+.list-item + ol > li:nth-child(1).header,
+.list-item + ol > li:nth-child(1)"\f102" > *,
+.list-item + ol > li:nth-child(1).directory > *,
+.list-item + ol > li:nth-child(1).header > * {
+  transition-delay: 0.025s;
+  animation-delay: 0.025s;
+}
+.list-item + ol > li:nth-child(2)"\f102",
+.list-item + ol > li:nth-child(2).directory,
+.list-item + ol > li:nth-child(2).header {
+  transition: all 0.2s ease;
+}
+.list-item + ol > li:nth-child(2)"\f102",
+.list-item + ol > li:nth-child(2).directory,
+.list-item + ol > li:nth-child(2).header,
+.list-item + ol > li:nth-child(2)"\f102" > *,
+.list-item + ol > li:nth-child(2).directory > *,
+.list-item + ol > li:nth-child(2).header > * {
+  transition-delay: 0.05s;
+  animation-delay: 0.05s;
+}
+.list-item + ol > li:nth-child(3)"\f102",
+.list-item + ol > li:nth-child(3).directory,
+.list-item + ol > li:nth-child(3).header {
+  transition: all 0.2s ease;
+}
+.list-item + ol > li:nth-child(3)"\f102",
+.list-item + ol > li:nth-child(3).directory,
+.list-item + ol > li:nth-child(3).header,
+.list-item + ol > li:nth-child(3)"\f102" > *,
+.list-item + ol > li:nth-child(3).directory > *,
+.list-item + ol > li:nth-child(3).header > * {
+  transition-delay: 0.07500000000000001s;
+  animation-delay: 0.07500000000000001s;
+}
+.list-item + ol > li:nth-child(4)"\f102",
+.list-item + ol > li:nth-child(4).directory,
+.list-item + ol > li:nth-child(4).header {
+  transition: all 0.2s ease;
+}
+.list-item + ol > li:nth-child(4)"\f102",
+.list-item + ol > li:nth-child(4).directory,
+.list-item + ol > li:nth-child(4).header,
+.list-item + ol > li:nth-child(4)"\f102" > *,
+.list-item + ol > li:nth-child(4).directory > *,
+.list-item + ol > li:nth-child(4).header > * {
+  transition-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+.list-item + ol > li:nth-child(5)"\f102",
+.list-item + ol > li:nth-child(5).directory,
+.list-item + ol > li:nth-child(5).header {
+  transition: all 0.2s ease;
+}
+.list-item + ol > li:nth-child(5)"\f102",
+.list-item + ol > li:nth-child(5).directory,
+.list-item + ol > li:nth-child(5).header,
+.list-item + ol > li:nth-child(5)"\f102" > *,
+.list-item + ol > li:nth-child(5).directory > *,
+.list-item + ol > li:nth-child(5).header > * {
+  transition-delay: 0.125s;
+  animation-delay: 0.125s;
+}
+.list-item + ol > li:nth-child(6)"\f102",
+.list-item + ol > li:nth-child(6).directory,
+.list-item + ol > li:nth-child(6).header {
+  transition: all 0.2s ease;
+}
+.list-item + ol > li:nth-child(6)"\f102",
+.list-item + ol > li:nth-child(6).directory,
+.list-item + ol > li:nth-child(6).header,
+.list-item + ol > li:nth-child(6)"\f102" > *,
+.list-item + ol > li:nth-child(6).directory > *,
+.list-item + ol > li:nth-child(6).header > * {
+  transition-delay: 0.15000000000000002s;
+  animation-delay: 0.15000000000000002s;
+}
+.list-item + ol > li:nth-child(7)"\f102",
+.list-item + ol > li:nth-child(7).directory,
+.list-item + ol > li:nth-child(7).header {
+  transition: all 0.2s ease;
+}
+.list-item + ol > li:nth-child(7)"\f102",
+.list-item + ol > li:nth-child(7).directory,
+.list-item + ol > li:nth-child(7).header,
+.list-item + ol > li:nth-child(7)"\f102" > *,
+.list-item + ol > li:nth-child(7).directory > *,
+.list-item + ol > li:nth-child(7).header > * {
+  transition-delay: 0.17500000000000002s;
+  animation-delay: 0.17500000000000002s;
+}
+.list-item + ol > li:nth-child(8)"\f102",
+.list-item + ol > li:nth-child(8).directory,
+.list-item + ol > li:nth-child(8).header {
+  transition: all 0.2s ease;
+}
+.list-item + ol > li:nth-child(8)"\f102",
+.list-item + ol > li:nth-child(8).directory,
+.list-item + ol > li:nth-child(8).header,
+.list-item + ol > li:nth-child(8)"\f102" > *,
+.list-item + ol > li:nth-child(8).directory > *,
+.list-item + ol > li:nth-child(8).header > * {
+  transition-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+.list-item + ol > li:nth-child(9)"\f102",
+.list-item + ol > li:nth-child(9).directory,
+.list-item + ol > li:nth-child(9).header {
+  transition: all 0.2s ease;
+}
+.list-item + ol > li:nth-child(9)"\f102",
+.list-item + ol > li:nth-child(9).directory,
+.list-item + ol > li:nth-child(9).header,
+.list-item + ol > li:nth-child(9)"\f102" > *,
+.list-item + ol > li:nth-child(9).directory > *,
+.list-item + ol > li:nth-child(9).header > * {
+  transition-delay: 0.225s;
+  animation-delay: 0.225s;
+}
+.list-item + ol > li:nth-child(10)"\f102",
+.list-item + ol > li:nth-child(10).directory,
+.list-item + ol > li:nth-child(10).header {
+  transition: all 0.2s ease;
+}
+.list-item + ol > li:nth-child(10)"\f102",
+.list-item + ol > li:nth-child(10).directory,
+.list-item + ol > li:nth-child(10).header,
+.list-item + ol > li:nth-child(10)"\f102" > *,
+.list-item + ol > li:nth-child(10).directory > *,
+.list-item + ol > li:nth-child(10).header > * {
+  transition-delay: 0.25s;
+  animation-delay: 0.25s;
+}
+.list-item + ol > li:nth-child(11)"\f102",
+.list-item + ol > li:nth-child(11).directory,
+.list-item + ol > li:nth-child(11).header {
+  transition: all 0.2s ease;
+}
+.list-item + ol > li:nth-child(11)"\f102",
+.list-item + ol > li:nth-child(11).directory,
+.list-item + ol > li:nth-child(11).header,
+.list-item + ol > li:nth-child(11)"\f102" > *,
+.list-item + ol > li:nth-child(11).directory > *,
+.list-item + ol > li:nth-child(11).header > * {
+  transition-delay: 0.275s;
+  animation-delay: 0.275s;
+}
+.list-item + ol > li:nth-child(12)"\f102",
+.list-item + ol > li:nth-child(12).directory,
+.list-item + ol > li:nth-child(12).header {
+  transition: all 0.2s ease;
+}
+.list-item + ol > li:nth-child(12)"\f102",
+.list-item + ol > li:nth-child(12).directory,
+.list-item + ol > li:nth-child(12).header,
+.list-item + ol > li:nth-child(12)"\f102" > *,
+.list-item + ol > li:nth-child(12).directory > *,
+.list-item + ol > li:nth-child(12).header > * {
+  transition-delay: 0.30000000000000004s;
+  animation-delay: 0.30000000000000004s;
+}
+.list-item + ol > li:nth-child(13)"\f102",
+.list-item + ol > li:nth-child(13).directory,
+.list-item + ol > li:nth-child(13).header {
+  transition: all 0.2s ease;
+}
+.list-item + ol > li:nth-child(13)"\f102",
+.list-item + ol > li:nth-child(13).directory,
+.list-item + ol > li:nth-child(13).header,
+.list-item + ol > li:nth-child(13)"\f102" > *,
+.list-item + ol > li:nth-child(13).directory > *,
+.list-item + ol > li:nth-child(13).header > * {
+  transition-delay: 0.325s;
+  animation-delay: 0.325s;
+}
+.list-item + ol > li:nth-child(14)"\f102",
+.list-item + ol > li:nth-child(14).directory,
+.list-item + ol > li:nth-child(14).header {
+  transition: all 0.2s ease;
+}
+.list-item + ol > li:nth-child(14)"\f102",
+.list-item + ol > li:nth-child(14).directory,
+.list-item + ol > li:nth-child(14).header,
+.list-item + ol > li:nth-child(14)"\f102" > *,
+.list-item + ol > li:nth-child(14).directory > *,
+.list-item + ol > li:nth-child(14).header > * {
+  transition-delay: 0.35000000000000003s;
+  animation-delay: 0.35000000000000003s;
+}
+.list-item + ol > li:nth-child(15)"\f102",
+.list-item + ol > li:nth-child(15).directory,
+.list-item + ol > li:nth-child(15).header {
+  transition: all 0.2s ease;
+}
+.list-item + ol > li:nth-child(15)"\f102",
+.list-item + ol > li:nth-child(15).directory,
+.list-item + ol > li:nth-child(15).header,
+.list-item + ol > li:nth-child(15)"\f102" > *,
+.list-item + ol > li:nth-child(15).directory > *,
+.list-item + ol > li:nth-child(15).header > * {
+  transition-delay: 0.375s;
+  animation-delay: 0.375s;
+}
+.list-item + ol > li:nth-child(16)"\f102",
+.list-item + ol > li:nth-child(16).directory,
+.list-item + ol > li:nth-child(16).header {
+  transition: all 0.2s ease;
+}
+.list-item + ol > li:nth-child(16)"\f102",
+.list-item + ol > li:nth-child(16).directory,
+.list-item + ol > li:nth-child(16).header,
+.list-item + ol > li:nth-child(16)"\f102" > *,
+.list-item + ol > li:nth-child(16).directory > *,
+.list-item + ol > li:nth-child(16).header > * {
+  transition-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+.list-item + ol > li:nth-child(17)"\f102",
+.list-item + ol > li:nth-child(17).directory,
+.list-item + ol > li:nth-child(17).header {
+  transition: all 0.2s ease;
+}
+.list-item + ol > li:nth-child(17)"\f102",
+.list-item + ol > li:nth-child(17).directory,
+.list-item + ol > li:nth-child(17).header,
+.list-item + ol > li:nth-child(17)"\f102" > *,
+.list-item + ol > li:nth-child(17).directory > *,
+.list-item + ol > li:nth-child(17).header > * {
+  transition-delay: 0.42500000000000004s;
+  animation-delay: 0.42500000000000004s;
+}
+.list-item + ol > li:nth-child(18)"\f102",
+.list-item + ol > li:nth-child(18).directory,
+.list-item + ol > li:nth-child(18).header {
+  transition: all 0.2s ease;
+}
+.list-item + ol > li:nth-child(18)"\f102",
+.list-item + ol > li:nth-child(18).directory,
+.list-item + ol > li:nth-child(18).header,
+.list-item + ol > li:nth-child(18)"\f102" > *,
+.list-item + ol > li:nth-child(18).directory > *,
+.list-item + ol > li:nth-child(18).header > * {
+  transition-delay: 0.45s;
+  animation-delay: 0.45s;
+}
+.list-item + ol > li:nth-child(19)"\f102",
+.list-item + ol > li:nth-child(19).directory,
+.list-item + ol > li:nth-child(19).header {
+  transition: all 0.2s ease;
+}
+.list-item + ol > li:nth-child(19)"\f102",
+.list-item + ol > li:nth-child(19).directory,
+.list-item + ol > li:nth-child(19).header,
+.list-item + ol > li:nth-child(19)"\f102" > *,
+.list-item + ol > li:nth-child(19).directory > *,
+.list-item + ol > li:nth-child(19).header > * {
+  transition-delay: 0.47500000000000003s;
+  animation-delay: 0.47500000000000003s;
+}
+.list-item + ol > li:nth-child(20)"\f102",
+.list-item + ol > li:nth-child(20).directory,
+.list-item + ol > li:nth-child(20).header {
+  transition: all 0.2s ease;
+}
+.list-item + ol > li:nth-child(20)"\f102",
+.list-item + ol > li:nth-child(20).directory,
+.list-item + ol > li:nth-child(20).header,
+.list-item + ol > li:nth-child(20)"\f102" > *,
+.list-item + ol > li:nth-child(20).directory > *,
+.list-item + ol > li:nth-child(20).header > * {
+  transition-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+.list-item + ol > li:nth-child(21)"\f102",
+.list-item + ol > li:nth-child(21).directory,
+.list-item + ol > li:nth-child(21).header {
+  transition: all 0.2s ease;
+}
+.list-item + ol > li:nth-child(21)"\f102",
+.list-item + ol > li:nth-child(21).directory,
+.list-item + ol > li:nth-child(21).header,
+.list-item + ol > li:nth-child(21)"\f102" > *,
+.list-item + ol > li:nth-child(21).directory > *,
+.list-item + ol > li:nth-child(21).header > * {
+  transition-delay: 0.525s;
+  animation-delay: 0.525s;
+}
+.list-item + ol > li:nth-child(22)"\f102",
+.list-item + ol > li:nth-child(22).directory,
+.list-item + ol > li:nth-child(22).header {
+  transition: all 0.2s ease;
+}
+.list-item + ol > li:nth-child(22)"\f102",
+.list-item + ol > li:nth-child(22).directory,
+.list-item + ol > li:nth-child(22).header,
+.list-item + ol > li:nth-child(22)"\f102" > *,
+.list-item + ol > li:nth-child(22).directory > *,
+.list-item + ol > li:nth-child(22).header > * {
+  transition-delay: 0.55s;
+  animation-delay: 0.55s;
+}
+.list-item + ol > li:nth-child(23)"\f102",
+.list-item + ol > li:nth-child(23).directory,
+.list-item + ol > li:nth-child(23).header {
+  transition: all 0.2s ease;
+}
+.list-item + ol > li:nth-child(23)"\f102",
+.list-item + ol > li:nth-child(23).directory,
+.list-item + ol > li:nth-child(23).header,
+.list-item + ol > li:nth-child(23)"\f102" > *,
+.list-item + ol > li:nth-child(23).directory > *,
+.list-item + ol > li:nth-child(23).header > * {
+  transition-delay: 0.5750000000000001s;
+  animation-delay: 0.5750000000000001s;
+}
+.list-item + ol > li:nth-child(24)"\f102",
+.list-item + ol > li:nth-child(24).directory,
+.list-item + ol > li:nth-child(24).header {
+  transition: all 0.2s ease;
+}
+.list-item + ol > li:nth-child(24)"\f102",
+.list-item + ol > li:nth-child(24).directory,
+.list-item + ol > li:nth-child(24).header,
+.list-item + ol > li:nth-child(24)"\f102" > *,
+.list-item + ol > li:nth-child(24).directory > *,
+.list-item + ol > li:nth-child(24).header > * {
+  transition-delay: 0.6000000000000001s;
+  animation-delay: 0.6000000000000001s;
+}
+.list-item + ol > li:nth-child(25)"\f102",
+.list-item + ol > li:nth-child(25).directory,
+.list-item + ol > li:nth-child(25).header {
+  transition: all 0.2s ease;
+}
+.list-item + ol > li:nth-child(25)"\f102",
+.list-item + ol > li:nth-child(25).directory,
+.list-item + ol > li:nth-child(25).header,
+.list-item + ol > li:nth-child(25)"\f102" > *,
+.list-item + ol > li:nth-child(25).directory > *,
+.list-item + ol > li:nth-child(25).header > * {
+  transition-delay: 0.625s;
+  animation-delay: 0.625s;
+}
+.list-item + ol > li:nth-child(26)"\f102",
+.list-item + ol > li:nth-child(26).directory,
+.list-item + ol > li:nth-child(26).header {
+  transition: all 0.2s ease;
+}
+.list-item + ol > li:nth-child(26)"\f102",
+.list-item + ol > li:nth-child(26).directory,
+.list-item + ol > li:nth-child(26).header,
+.list-item + ol > li:nth-child(26)"\f102" > *,
+.list-item + ol > li:nth-child(26).directory > *,
+.list-item + ol > li:nth-child(26).header > * {
+  transition-delay: 0.65s;
+  animation-delay: 0.65s;
+}
+.list-item + ol > li:nth-child(27)"\f102",
+.list-item + ol > li:nth-child(27).directory,
+.list-item + ol > li:nth-child(27).header {
+  transition: all 0.2s ease;
+}
+.list-item + ol > li:nth-child(27)"\f102",
+.list-item + ol > li:nth-child(27).directory,
+.list-item + ol > li:nth-child(27).header,
+.list-item + ol > li:nth-child(27)"\f102" > *,
+.list-item + ol > li:nth-child(27).directory > *,
+.list-item + ol > li:nth-child(27).header > * {
+  transition-delay: 0.675s;
+  animation-delay: 0.675s;
+}
+.list-item + ol > li:nth-child(28)"\f102",
+.list-item + ol > li:nth-child(28).directory,
+.list-item + ol > li:nth-child(28).header {
+  transition: all 0.2s ease;
+}
+.list-item + ol > li:nth-child(28)"\f102",
+.list-item + ol > li:nth-child(28).directory,
+.list-item + ol > li:nth-child(28).header,
+.list-item + ol > li:nth-child(28)"\f102" > *,
+.list-item + ol > li:nth-child(28).directory > *,
+.list-item + ol > li:nth-child(28).header > * {
+  transition-delay: 0.7000000000000001s;
+  animation-delay: 0.7000000000000001s;
+}
+.list-item + ol > li:nth-child(29)"\f102",
+.list-item + ol > li:nth-child(29).directory,
+.list-item + ol > li:nth-child(29).header {
+  transition: all 0.2s ease;
+}
+.list-item + ol > li:nth-child(29)"\f102",
+.list-item + ol > li:nth-child(29).directory,
+.list-item + ol > li:nth-child(29).header,
+.list-item + ol > li:nth-child(29)"\f102" > *,
+.list-item + ol > li:nth-child(29).directory > *,
+.list-item + ol > li:nth-child(29).header > * {
+  transition-delay: 0.7250000000000001s;
+  animation-delay: 0.7250000000000001s;
+}
+.list-item + ol > li:nth-child(30)"\f102",
+.list-item + ol > li:nth-child(30).directory,
+.list-item + ol > li:nth-child(30).header {
+  transition: all 0.2s ease;
+}
+.list-item + ol > li:nth-child(30)"\f102",
+.list-item + ol > li:nth-child(30).directory,
+.list-item + ol > li:nth-child(30).header,
+.list-item + ol > li:nth-child(30)"\f102" > *,
+.list-item + ol > li:nth-child(30).directory > *,
+.list-item + ol > li:nth-child(30).header > * {
+  transition-delay: 0.75s;
+  animation-delay: 0.75s;
+}
+/* Lists */
+[class*="list"][class*="item"],
+[class*="list"][class*="item"]::before {
+  display: inline-flex;
+  position: relative;
+  max-height: fit-content;
+}
+[class*="list"][class*="item"]::before {
+  text-indent: calc(- 1.5em);
+}
+[class*="list"][class*="item"] .name {
+  width: fit-content;
+  cursor: pointer;
+  max-width: 12vw;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+[class*="list"][class*="item"] .name:hover {
+  overflow-x: auto;
+}
+[class*="list"][class*="item"] .header::before,
+[class*="list"][class*="item"] .name::before {
+  display: none !important;
+}
+[class*="list"][class*="item"][class*="list-item"]:not([class*="nested"]):not(.header) {
+  max-height: 1.1rem;
+  flex: 1;
+  padding: 0 !important;
+  margin-left: 0 !important;
+  margin-right: auto;
+}
+[class*="list"][class*="item"][class*="list-item"]:not([class*="nested"]):not(.header),
+[class*="list"][class*="item"][class*="list-item"]:not([class*="nested"]):not(.header)::before {
+  position: relative;
+  display: inline-flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+[class*="list"][class*="item"][class*="list-item"]:not([class*="nested"]):not(.header)::before {
+  content: "\251C\2500\2500";
+  height: 1.1rem;
+}
+[class*="list"][class*="item"][class*="list-item"]:not([class*="nested"]):not(.header):last-of-type::before {
+  content: "\2514\2500\2500";
+}
+[class*="list"][class*="item"][class*="nested"] {
+  flex-flow: row wrap;
+  align-items: center;
+  padding-left: 0 !important;
+  text-indent: 1ch;
+}
+[class*="list"][class*="item"][class*="nested"] .header {
+  max-height: 1.1rem;
+  margin-right: auto;
+  min-width: fit-content;
+}
+[class*="list"][class*="item"][class*="nested"],
+[class*="list"][class*="item"][class*="nested"]::before {
+  position: relative;
+  display: inline-flex;
+}
+[class*="list"][class*="item"][class*="nested"]::before {
+  flex-flow: row nowrap;
+}
+.collapsed[class*="list"][class*="item"][class*="nested"]::before {
+  content: "\251C\2500\2500";
+}
+.expanded[class*="list"][class*="item"][class*="nested"]::before {
+  content: "\251C\2500\252C";
+  scale: 1 1.1;
+  height: 1.1rem;
+}
+[class*="list"][class*="item"][class*="nested"] .collapsed {
+  flex-flow: row nowrap;
+  height: 1.1rem;
+}
+.overlay,
+atom-panel.modal {
+  top: 0;
+  left: 50% ;
+  width: 500px ;
+  z-index: 9999 ;
+  padding: 10px ;
+  display: block ;
+  overflow: hidden ;
+  position: absolute ;
+  margin-left: -250px;
+  font-size: calc(0.16vh + 0.9vw);
+  box-sizing: border-box;
+  color: hsl(220, 1%, 97%);
+  padding: 2px;
+  border: 3px solid hsla(0, 0%, 0%, 0);
+  border-radius: 4px;
+  background: hsla(0, 0%, 0%, 0.555);
+  box-shadow: 0 2px 8px 1px hsla(222, 7%, 5%, 0.45);
+}
+.overlay atom-text-editor[mini],
+atom-panel.modal atom-text-editor[mini] {
+  margin-bottom: 2px;
+}
+@media (max-width: 500px) {
+  .overlay,
+  atom-panel.modal {
+    width: 100%;
+    left: 0;
+    margin-left: 0;
+  }
+}
+.overlay h1,
+atom-panel.modal h1 {
+  margin-top: 0;
+  color: hsl(220, 1%, 97%);
+  font-size: 1.6em;
+  font-weight: bold;
+}
+.overlay h2,
+atom-panel.modal h2 {
+  font-size: 1.3em;
+}
+.overlay .message,
+atom-panel.modal .message {
+  padding-top: 5px;
+  font-size: 11px;
+}
+.overlay.mini,
+atom-panel.modal.mini {
+  width: 200px;
+  margin-left: -100px;
+  font-size: 12px;
+}
+.overlay.select-list ol.list-group,
+atom-panel.modal.select-list ol.list-group,
+.overlay .select-list ol.list-group,
+atom-panel.modal .select-list ol.list-group {
+  margin: 0 -2px -2px;
+}
+.overlay.select-list ol.list-group li,
+atom-panel.modal.select-list ol.list-group li,
+.overlay .select-list ol.list-group li,
+atom-panel.modal .select-list ol.list-group li {
+  padding: 2px;
+  border-bottom: 1px solid hsla(220, 10%, 87%, 0.025);
+}
+.overlay.select-list ol.list-group li.two-lines,
+atom-panel.modal.select-list ol.list-group li.two-lines,
+.overlay .select-list ol.list-group li.two-lines,
+atom-panel.modal .select-list ol.list-group li.two-lines {
+  padding: 1px 2px;
+}
+.overlay.select-list ol.list-group li .status.icon,
+atom-panel.modal.select-list ol.list-group li .status.icon,
+.overlay .select-list ol.list-group li .status.icon,
+atom-panel.modal .select-list ol.list-group li .status.icon {
+  float: right;
+  margin-left: 5px;
+}
+.overlay.select-list ol.list-group li .status.icon::before,
+atom-panel.modal.select-list ol.list-group li .status.icon::before,
+.overlay .select-list ol.list-group li .status.icon::before,
+atom-panel.modal .select-list ol.list-group li .status.icon::before {
+  margin-right: 0;
+}
+.overlay.select-list ol.list-group li.selected .status.icon,
+atom-panel.modal.select-list ol.list-group li.selected .status.icon,
+.overlay .select-list ol.list-group li.selected .status.icon,
+atom-panel.modal .select-list ol.list-group li.selected .status.icon {
+  color: gray;
+}
+.overlay.select-list ol.list-group li:last-child,
+atom-panel.modal.select-list ol.list-group li:last-child,
+.overlay .select-list ol.list-group li:last-child,
+atom-panel.modal .select-list ol.list-group li:last-child {
+  border-bottom: none;
+}
+.nav-tabs {
+  background-color: none;
+  border-bottom: none;
+  box-shadow: inset 0 0 1em hsla(222, 7%, 5%, 0.45);
+}
+.nav-tabs li.active a,
+.nav-tabs li a {
+  border: none;
+  margin-right: 0;
+  margin-bottom: 1px;
+}
+.nav-tabs li.active a,
+.nav-tabs li.active a:hover,
+.nav-tabs li a:hover {
+  filter: brightness(1.05);
+  background-color: none;
+  border: none;
+  color: gray;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.nav-tabs li.active a {
+  filter: brightness(1.1);
+  background-color: none;
+}
+.btn {
+  border: none;
+  color: hsla(220, 10%, 93%, 0.9);
+  height: 3px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 2px;
+  z-index: 0;
+  font-size: calc(0.16vh + 0.9vw);
+  text-align: center;
+  white-space: nowrap;
+  font-weight: normal;
+  line-height: 1;
+  margin-bottom: 0;
+  vertical-align: middle;
+  border-radius: 2px;
+  background-color: hsla(0, 0%, 0%, 0);
+  -webkit-user-select: none;
+}
+.btn.focus,
+.btn:focus,
+.btn:hover {
+  color: hsl(220, 1%, 97%);
+  background-color: hsla(0, 0%, 0%, 0);
+}
+.btn.active,
+.btn:active {
+  color: rgba(128, 128, 128, 0.66);
+  background-color: hsla(0, 0%, 0%, 0);
+}
+.btn.selected,
+.btn.selected:hover {
+  z-index: 1;
+  color: gray;
+  background-color: hsla(0, 0%, 0%, 0);
+}
+.btn.focus,
+.btn.active.focus,
+.btn:active.focus,
+.btn:focus,
+.btn.active:focus,
+.btn:active:focus {
+  outline: none;
+}
+.btn.btn-primary {
+  color: hsla(220, 10%, 87%, 0.9);
+  background-color: hsl(208, 20%, 19%);
+  box-shadow: inset 0 0 2em hsla(208, 20%, 14%, 0.5);
+  transition: 0.5s linear background-color, 5s linear box-shadow;
+  will-change: background;
+}
+.btn.btn-primary.focus,
+.btn.btn-primary:focus {
+  color: hsl(228, 100%, 50%);
+  background-color: hsl(208, 20%, 19%);
+  box-shadow: inset 0 0 2em hsla(208, 20%, 14%, 0.2);
+}
+.btn.btn-primary:hover {
+  color: hsl(228, 100%, 50%);
+  background-color: transparent;
+  text-shadow: 0 0 0.2rem, 0 0 0.1rem;
+}
+.btn.btn-primary.active,
+.btn.btn-primary:active {
+  color: hsla(220, 10%, 87%, 0.9);
+  background-color: hsl(208, 20%, 19%);
+}
+.btn.btn-primary.active.focus,
+.btn.btn-primary:active.focus,
+.btn.btn-primary.active:focus,
+.btn.btn-primary:active:focus,
+.btn.btn-primary.active:hover,
+.btn.btn-primary:active:hover {
+  color: hsl(228, 100%, 50%);
+  background-color: transparent;
+}
+.btn.btn-primary.selected,
+.btn.btn-primary.selected:hover {
+  z-index: 1;
+  background-color: hsl(208, 20%, 9%);
+  color: hsla(220, 10%, 87%, 0.9);
+}
+.btn.btn-primary.disabled.focus,
+.btn.btn-primary[disabled].focus,
+fieldset[disabled] .btn.btn-primary.focus,
+.btn.btn-primary.disabled:focus,
+.btn.btn-primary[disabled]:focus,
+fieldset[disabled] .btn.btn-primary:focus,
+.btn.btn-primary.disabled:hover,
+.btn.btn-primary[disabled]:hover,
+fieldset[disabled] .btn.btn-primary:hover {
+  background-color: hsl(208, 20%, 19%);
+}
+.btn.btn-primary .badge {
+  color: hsl(208, 20%, 19%);
+  background-color: hsla(220, 10%, 87%, 0.9);
+}
+.btn.btn-info {
+  color: hsla(220, 10%, 87%, 0.9);
+  background-color: hsl(208, 20%, 19%);
+  box-shadow: inset 0 0 2em hsla(208, 20%, 14%, 0.5);
+  transition: 0.5s linear background-color, 5s linear box-shadow;
+  will-change: background;
+}
+.btn.btn-info.focus,
+.btn.btn-info:focus {
+  color: hsl(228, 100%, 50%);
+  background-color: hsl(208, 20%, 19%);
+  box-shadow: inset 0 0 2em hsla(208, 20%, 14%, 0.2);
+}
+.btn.btn-info:hover {
+  color: hsl(228, 100%, 50%);
+  background-color: transparent;
+  text-shadow: 0 0 0.2rem, 0 0 0.1rem;
+}
+.btn.btn-info.active,
+.btn.btn-info:active {
+  color: hsla(220, 10%, 87%, 0.9);
+  background-color: hsl(208, 20%, 19%);
+}
+.btn.btn-info.active.focus,
+.btn.btn-info:active.focus,
+.btn.btn-info.active:focus,
+.btn.btn-info:active:focus,
+.btn.btn-info.active:hover,
+.btn.btn-info:active:hover {
+  color: hsl(228, 100%, 50%);
+  background-color: transparent;
+}
+.btn.btn-info.selected,
+.btn.btn-info.selected:hover {
+  z-index: 1;
+  background-color: hsl(208, 20%, 9%);
+  color: hsla(220, 10%, 87%, 0.9);
+}
+.btn.btn-info.disabled.focus,
+.btn.btn-info[disabled].focus,
+fieldset[disabled] .btn.btn-info.focus,
+.btn.btn-info.disabled:focus,
+.btn.btn-info[disabled]:focus,
+fieldset[disabled] .btn.btn-info:focus,
+.btn.btn-info.disabled:hover,
+.btn.btn-info[disabled]:hover,
+fieldset[disabled] .btn.btn-info:hover {
+  background-color: hsl(208, 20%, 19%);
+}
+.btn.btn-info .badge {
+  color: hsl(208, 20%, 19%);
+  background-color: hsla(220, 10%, 87%, 0.9);
+}
+.btn.btn-success {
+  color: hsla(220, 10%, 87%, 0.9);
+  background-color: hsl(162, 28%, 19%);
+  box-shadow: inset 0 0 2em hsla(162, 28%, 14%, 0.5);
+  transition: 0.5s linear background-color, 5s linear box-shadow;
+  will-change: background;
+}
+.btn.btn-success.focus,
+.btn.btn-success:focus {
+  color: hsl(172, 58%, 42%);
+  background-color: hsl(162, 28%, 19%);
+  box-shadow: inset 0 0 2em hsla(162, 28%, 14%, 0.2);
+}
+.btn.btn-success:hover {
+  color: hsl(172, 58%, 42%);
+  background-color: transparent;
+  text-shadow: 0 0 0.2rem, 0 0 0.1rem;
+}
+.btn.btn-success.active,
+.btn.btn-success:active {
+  color: hsla(220, 10%, 87%, 0.9);
+  background-color: hsl(162, 28%, 19%);
+}
+.btn.btn-success.active.focus,
+.btn.btn-success:active.focus,
+.btn.btn-success.active:focus,
+.btn.btn-success:active:focus,
+.btn.btn-success.active:hover,
+.btn.btn-success:active:hover {
+  color: hsl(172, 58%, 42%);
+  background-color: transparent;
+}
+.btn.btn-success.selected,
+.btn.btn-success.selected:hover {
+  z-index: 1;
+  background-color: hsl(162, 28%, 9%);
+  color: hsla(220, 10%, 87%, 0.9);
+}
+.btn.btn-success.disabled.focus,
+.btn.btn-success[disabled].focus,
+fieldset[disabled] .btn.btn-success.focus,
+.btn.btn-success.disabled:focus,
+.btn.btn-success[disabled]:focus,
+fieldset[disabled] .btn.btn-success:focus,
+.btn.btn-success.disabled:hover,
+.btn.btn-success[disabled]:hover,
+fieldset[disabled] .btn.btn-success:hover {
+  background-color: hsl(162, 28%, 19%);
+}
+.btn.btn-success .badge {
+  color: hsl(162, 28%, 19%);
+  background-color: hsla(220, 10%, 87%, 0.9);
+}
+.btn.btn-warning {
+  color: hsla(220, 10%, 87%, 0.9);
+  background-color: hsl(32, 20%, 19%);
+  box-shadow: inset 0 0 2em hsla(32, 20%, 14%, 0.5);
+  transition: 0.5s linear background-color, 5s linear box-shadow;
+  will-change: background;
+}
+.btn.btn-warning.focus,
+.btn.btn-warning:focus {
+  color: hsl(330, 60%, 50%);
+  background-color: hsl(32, 20%, 19%);
+  box-shadow: inset 0 0 2em hsla(32, 20%, 14%, 0.2);
+}
+.btn.btn-warning:hover {
+  color: hsl(330, 60%, 50%);
+  background-color: transparent;
+  text-shadow: 0 0 0.2rem, 0 0 0.1rem;
+}
+.btn.btn-warning.active,
+.btn.btn-warning:active {
+  color: hsla(220, 10%, 87%, 0.9);
+  background-color: hsl(32, 20%, 19%);
+}
+.btn.btn-warning.active.focus,
+.btn.btn-warning:active.focus,
+.btn.btn-warning.active:focus,
+.btn.btn-warning:active:focus,
+.btn.btn-warning.active:hover,
+.btn.btn-warning:active:hover {
+  color: hsl(330, 60%, 50%);
+  background-color: transparent;
+}
+.btn.btn-warning.selected,
+.btn.btn-warning.selected:hover {
+  z-index: 1;
+  background-color: hsl(32, 20%, 9%);
+  color: hsla(220, 10%, 87%, 0.9);
+}
+.btn.btn-warning.disabled.focus,
+.btn.btn-warning[disabled].focus,
+fieldset[disabled] .btn.btn-warning.focus,
+.btn.btn-warning.disabled:focus,
+.btn.btn-warning[disabled]:focus,
+fieldset[disabled] .btn.btn-warning:focus,
+.btn.btn-warning.disabled:hover,
+.btn.btn-warning[disabled]:hover,
+fieldset[disabled] .btn.btn-warning:hover {
+  background-color: hsl(32, 20%, 19%);
+}
+.btn.btn-warning .badge {
+  color: hsl(32, 20%, 19%);
+  background-color: hsla(220, 10%, 87%, 0.9);
+}
+.btn.btn-error {
+  color: hsla(220, 10%, 87%, 0.9);
+  background-color: hsl(0, 20%, 19%);
+  box-shadow: inset 0 0 2em hsla(0, 20%, 14%, 0.5);
+  transition: 0.5s linear background-color, 5s linear box-shadow;
+  will-change: background;
+}
+.btn.btn-error.focus,
+.btn.btn-error:focus {
+  color: hsl(345, 70%, 50%);
+  background-color: hsl(0, 20%, 19%);
+  box-shadow: inset 0 0 2em hsla(0, 20%, 14%, 0.2);
+}
+.btn.btn-error:hover {
+  color: hsl(345, 70%, 50%);
+  background-color: transparent;
+  text-shadow: 0 0 0.2rem, 0 0 0.1rem;
+}
+.btn.btn-error.active,
+.btn.btn-error:active {
+  color: hsla(220, 10%, 87%, 0.9);
+  background-color: hsl(0, 20%, 19%);
+}
+.btn.btn-error.active.focus,
+.btn.btn-error:active.focus,
+.btn.btn-error.active:focus,
+.btn.btn-error:active:focus,
+.btn.btn-error.active:hover,
+.btn.btn-error:active:hover {
+  color: hsl(345, 70%, 50%);
+  background-color: transparent;
+}
+.btn.btn-error.selected,
+.btn.btn-error.selected:hover {
+  z-index: 1;
+  background-color: hsl(0, 20%, 9%);
+  color: hsla(220, 10%, 87%, 0.9);
+}
+.btn.btn-error.disabled.focus,
+.btn.btn-error[disabled].focus,
+fieldset[disabled] .btn.btn-error.focus,
+.btn.btn-error.disabled:focus,
+.btn.btn-error[disabled]:focus,
+fieldset[disabled] .btn.btn-error:focus,
+.btn.btn-error.disabled:hover,
+.btn.btn-error[disabled]:hover,
+fieldset[disabled] .btn.btn-error:hover {
+  background-color: hsl(0, 20%, 19%);
+}
+.btn.btn-error .badge {
+  color: hsl(0, 20%, 19%);
+  background-color: hsla(220, 10%, 87%, 0.9);
+}
+.btn-group > .btn {
+  border-color: hsla(0, 0%, 0%, 0.05);
+}
+.tool-panel,
+.panel,
+atom-panel {
+  background-color: hsla(0, 0%, 0%, 0);
+}
+.tool-panel.bottom,
+.panel.bottom,
+atom-panel.bottom,
+.tool-panel.footer,
+.panel.footer,
+atom-panel.footer,
+.tool-panel.panel-bottom,
+.panel.panel-bottom,
+atom-panel.panel-bottom,
+.tool-panel.panel-footer,
+.panel.panel-footer,
+atom-panel.panel-footer {
+  border-top: 1px solid hsla(222, 7%, 6.5%, 0.3);
+}
+.panel-heading {
+  border-bottom: 1px solid hsla(0, 0%, 0%, 0);
+  background-color: hsla(0, 0%, 0%, 0);
+  margin: 0;
+  padding: 2px;
+  border-radius: 0;
+  font-size: calc(0.16vh + 0.9vw);
+  line-height: 1;
+}
+.inset-panel .panel-heading {
+  border-radius: 2px 2px 0 0;
+}
+.panel-heading .btn {
+  height: -4px;
+  line-height: -4px;
+  font-size: calc(0.16vh + 0.9vw);
+  position: relative;
+  top: -5px;
+}
+.inset-panel {
+  background-color: hsla(0, 0%, 0%, 0);
+  border-radius: 2px;
+}
+.inset-panel .panel-heading {
+  background-color: hsla(0, 0%, 0%, 0);
+}
+.pane-item .section .section-heading,
+.pane-item section .section-heading {
+  font-size: 2.75rem;
+  font-weight: 200;
+  margin-bottom: 1.125em;
+  color: hsla(220, 10%, 87%, 0.9);
+}
+.pane-item .section .section-heading.icon::before,
+.pane-item section .section-heading.icon::before {
+  font-size: 2.5rem;
+  margin-right: 1em;
+}
+.pane-item .panel {
+  border-color: hsla(0, 0%, 0%, 0);
+}
+.pane-item.preview-pane .preview-header {
+  padding: 1rem;
+  background: none;
+  border: none;
+}
+atom-pane-container {
+  position: relative;
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  contain: layout;
+}
+atom-pane-container atom-pane-axis {
+  position: relative;
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+}
+atom-pane-container atom-pane-axis > atom-pane-resize-handle {
+  position: relative;
+  z-index: 999 !important;
+}
+atom-pane-container atom-pane-axis > atom-pane-resize-handle:before {
+  content: "";
+  position: absolute;
+  z-index: 1000 !important;
+}
+atom-pane-container atom-pane-axis.vertical {
+  flex-direction: column;
+}
+atom-pane-container atom-pane-axis.vertical > * {
+  border: none;
+}
+atom-pane-container atom-pane-axis.vertical > atom-pane-resize-handle {
+  border-bottom: none;
+  cursor: row-resize;
+}
+atom-pane-container atom-pane-axis.vertical > atom-pane-resize-handle:before {
+  height: 8px;
+  top: -4px;
+  left: 0;
+  right: 0;
+  cursor: row-resize;
+}
+atom-pane-container atom-pane-axis.horizontal {
+  flex-direction: row;
+}
+atom-pane-container atom-pane-axis.horizontal > * {
+  border: none;
+}
+atom-pane-container atom-pane-axis.horizontal > atom-pane-resize-handle {
+  border-right: none;
+  cursor: col-resize;
+}
+atom-pane-container atom-pane-axis.horizontal > atom-pane-resize-handle:before {
+  width: 8px;
+  left: -4px;
+  top: 0;
+  bottom: 0;
+  cursor: col-resize;
+}
+atom-pane-container atom-pane {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  overflow: visible;
+  min-width: 0;
+  min-height: 0;
+  background: none;
+  border: none;
+}
+atom-pane-container atom-pane .item-views {
+  flex: 1;
+  display: flex;
+  min-width: 0;
+  min-height: 0;
+  position: relative;
+}
+atom-pane-container atom-pane .item-views .pane-item {
+  color: hsl(220, 1%, 97%);
+  background-color: hsla(0, 0%, 0%, 0);
+  background: none;
+}
+atom-pane-container atom-pane .item-views > *,
+atom-pane-container atom-pane .item-views > atom-text-editor.react > * {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.tab-bar {
+  justify-content: space-evenly;
+  border-bottom: none !important;
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  transition: 0.8s ease all;
+  position: absolute;
+  top: 0;
+  min-width: 100%;
+  contain: size, layout;
+  height: 22px;
+  z-index: 500;
+  will-change: contents;
+  -webkit-app-region: drag;
+}
+.tab-bar:not(:hover) {
+  --flip: 1;
+  background: linear-gradient(to bottom, hsla(222, 7%, 3%, 0.55) 30%, hsla(0, 0%, 0%, 0));
+  transition-delay: 0.8s;
+}
+.tab-bar:not(:hover) .tab {
+  transition-delay: 0.8s;
+}
+.tab-bar:not(:hover) .tab:hover {
+  flex-grow: 1;
+  flex-shrink: 1;
+  color: hsl(220, 1%, 97%);
+  scale: 1;
+  max-width: 200vw;
+  translate: 0 0;
+  background: transparent;
+}
+.tab-bar:not(:hover) .tab:hover ~ .tab.active {
+  background: transparent !important;
+}
+.tab-bar:not(:hover) .tab.active:hover {
+  transition-timing-function: ease-in;
+  scale: 1.0625;
+}
+.tab-bar:not(:hover) .tab.active:not(:hover) {
+  flex-grow: 1;
+  flex-shrink: 0.01;
+  opacity: 1;
+  width: 100%;
+}
+.tab-bar:not(:hover) .tab:not(.active) {
+  --flip: 1;
+}
+.tab-bar:not(:hover) .tab:not(.active):hover {
+  transition-timing-function: ease-out;
+  color: hsl(220, 1%, 97%);
+  text-shadow: 0 0 0.05em rgba(255, 255, 255, 0.95);
+  filter: brightness(125%);
+  opacity: 1;
+  translate: calc(-25vw*var(--flip)) 0;
+  left: calc((1 - var(--flip))*1);
+  transition-delay: 0.75s;
+}
+.tab-bar:not(:hover) .tab:not(.active):not(:hover) {
+  max-width: 0;
+  left: calc(1 - var(--flip));
+  flex-grow: 0.01;
+  flex-shrink: 1;
+  scale: 0.01 1;
+  translate: calc(-25vw*var(--flip)) 0;
+  visibility: hidden;
+  opacity: 0.5;
+}
+.tab-bar:hover {
+  --flip: 1;
+  background: linear-gradient(to bottom, hsla(222, 7%, 3%, 0.25) 30%, hsla(0, 0%, 0%, 0));
+}
+.tab-bar:hover .tab {
+  flex-grow: 1;
+  flex-shrink: 1;
+  color: hsl(220, 1%, 97%);
+  scale: 1;
+  max-width: 200vw;
+  translate: 0 0;
+  background: transparent;
+}
+.tab-bar:hover .tab ~ .tab.active {
+  background: transparent !important;
+}
+.tab-bar:hover .tab:hover {
+  flex-grow: 1;
+  flex-shrink: 1;
+  color: hsl(220, 1%, 97%);
+  scale: 1;
+  max-width: 200vw;
+  translate: 0 0;
+  background: transparent;
+}
+.tab-bar:hover .tab:hover ~ .tab.active {
+  background: transparent !important;
+}
+.tab-bar:hover .tab:not(:hover) {
+  background: hsla(0, 0%, 0%, 0);
+}
+.tab-bar:hover .tab.active:hover {
+  transition-timing-function: ease-in;
+  scale: 1.0625;
+}
+.tab-bar:hover .tab.active:not(:hover) {
+  transition-timing-function: ease-in;
+  scale: 1.0625;
+  opacity: 0.05;
+}
+.tab-bar:hover .tab:not(.active) {
+  --flip: 1;
+}
+.tab-bar:hover .tab:not(.active):hover {
+  transition-timing-function: ease-out;
+  color: hsl(220, 1%, 97%);
+  text-shadow: 0 0 0.05em rgba(255, 255, 255, 0.95);
+  filter: brightness(125%);
+  opacity: 1;
+  translate: calc(-25vw*var(--flip)) 0;
+  left: calc((1 - var(--flip))*1);
+  transition-delay: 0.75s;
+  transition-delay: 4.75s;
+}
+.tab-bar .tab {
+  color: hsla(220, 10%, 87%, 0.9);
+  height: 22px;
+  line-height: 22px;
+  font-size: calc(0.16vh + 0.9vw);
+  border-right: 1px solid hsla(0, 0%, 0%, 0);
+  background-color: hsla(0, 0%, 0%, 0);
+  flex-basis: 0.001;
+  -webkit-app-region: no-drag;
+  margin: auto;
+  transition-property: all;
+  transition-duration: 0.8s;
+  transition-delay: 0.4s;
+  max-width: 200vw !important;
+  z-index: 500;
+  display: flex;
+  justify-content: center;
+  padding: 0 1.5em;
+  will-change: contents;
+}
+.tab-bar .tab.active {
+  position: absolute;
+  color: gray;
+  background: hsla(0, 0%, 0%, 0);
+  order: -1;
+}
+.tab-bar .tab:not(.active) {
+  box-shadow: 0 0.1em 0.1em -0.09em hsla(0, 0%, 0%, 0);
+  order: -2;
+}
+.tab-bar .tab .title {
+  text-align: center;
+}
+.tab-bar .tab.modified:not(:hover) .close-icon {
+  top: 50%;
+  right: 6px;
+  margin-top: -3px;
+  border-color: hsla(0, 0%, 0%, 0);
+}
+.tab-bar .tab.modified:hover .close-icon {
+  color: currentColor;
+}
+.tab-bar .tab .close-icon {
+  position: relative;
+  cursor: pointer;
+  top: unset;
+  left: 0.5em;
+  display: block;
+  transition: 0.8s ease opacity;
+}
+.tab-bar .tab:hover.close-icon.active {
+  opacity: 1;
+}
+.tab-bar .tab:not(:hover) .close-icon {
+  opacity: 0;
+}
+.tab-bar .tab.active .close-icon:hover {
+  color: gray;
+  text-shadow: 0 0 1em rgba(255, 255, 255, 0.95);
+}
+.tab-bar .tab.is-dragging {
+  background: hsla(0, 0%, 0%, 0);
+  text-shadow: 0 0 1em rgba(255, 255, 255, 0.95);
+  border-color: transparent;
+  opacity: 0.5;
+}
+.tab-bar .tab.is-dragging .close-icon {
+  visibility: hidden;
+}
+.tab-unhover .close-icon {
+  opacity: 0;
+}
+atom-dock.left .tab-bar {
+  display: absolute;
+}
+atom-dock.left .tab-bar .title {
+  color: transparent;
+  visibility: hidden;
+}
+atom-dock.right .tab-bar {
+  position: absolute;
+}
+.tab-bar .tab {
+  font-size: 0.8rem !important;
+}
+.tab-bar {
+  background: hsla(213, 10%, 25%, 0.55) !important;
+  opacity: 0.95;
+  font-family: SF Pro Rounded !important;
+}
+.tab-bar,
+.tab-bar .tab {
+  height: 1.25rem !important;
+  contain: layout paint;
+  line-height: 1.25rem;
+  font-size: 0.8rem !important;
+  color: hsl(0, 0%, 60%) !important;
+}
+.title-bar {
+  background: hsla(222, 7%, 5%, 0.45);
+  border-bottom: none;
+  color: hsla(220, 10%, 87%, 0.9);
+  font-size: calc(0.16vh + 0.9vw);
+}
+.title-bar {
+  display: none;
+}
+.status-bar {
+  font-size: calc(0.16vh + 0.9vw);
+  color: hsla(220, 10%, 87%, 0.9);
+  border-top: 1px solid hsla(0, 0%, 0%, 0);
+  background-color: hsla(0, 0%, 0%, 0);
+}
+status-bar {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 1.25rem;
+  display: flex;
+  align-items: center;
+  box-sizing: content-box !important;
+  contain: layout size;
+  color: hsla(0, 0%, 47%, 0.9);
+}
+status-bar .icon {
+  max-width: min-content;
+}
+status-bar > * {
+  filter: saturate(0.1);
+}
+status-bar-right {
+  margin: 0 auto 0 0 !important;
+  padding: 0;
+  margin-left: auto;
+  justify-content: flex-end;
+}
+status-bar-left {
+  margin: 0 0 0 auto !important;
+  padding: 0;
+  margin-right: auto;
+  justify-content: flex-start;
+}
+status-bar,
+status-bar * {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  font-weight: 200;
+}
+status-bar *,
+status-bar * * {
+  height: -webkit-fill-available;
+  max-height: 1.25rem;
+  contain: layout;
+  position: relative;
+}
+status-bar a,
+status-bar * a,
+status-bar span,
+status-bar * span {
+  display: inline-flex;
+  margin: 0 2px;
+  vertical-align: middle;
+}
+status-bar {
+  background: hsla(213, 10%, 25%, 0.55) !important;
+  opacity: 0.95;
+  font-family: SF Pro Rounded !important;
+}
+status-bar,
+status-bar .tab {
+  height: 1.25rem !important;
+  contain: layout paint;
+  line-height: 1.25rem;
+  font-size: 0.8rem !important;
+  color: hsl(0, 0%, 60%) !important;
+}
+.tree-view {
+  padding: 0 1px;
+  zoom: 0.975;
+  background: transparent;
+  box-sizing: content-box;
+}
+.tree-view .list-item,
+.tree-view .entry {
+  background: transparent;
+}
+.tree-view .list-item.selected {
+  color: gray;
+}
+.tab[data-type="TreeView"] {
+  display: none !important;
+}
+.list-item.file {
+  color: gray;
+}
+.list-item .close-button:before {
+  display: none;
+}
+.list-item .icon-file:before {
+  display: none;
+}
+.list-item.header {
+  color: gray;
+}
+.list-item.header .name:before {
+  display: none;
+}
+.list-item-pane-header {
+  cursor: pointer;
+}
+.list-item-pane-header .name:before {
+  display: none;
+}
+.list-item-pane .list-item-pane-header:hover:before {
+  color: white;
+}
+.tree-view-panes .list-item-pane-header.header.list-item {
+  font-size: 0;
+}
+.tree-view-panes .list-item-pane-header.header.list-item::after {
+  font-size: 0.75rem;
+  content: "\2550\2550\2550\2550\2550\2550\2550\2550\2550\2550\2550\2550\2550\2550\2550";
+  flex-basis: 100%;
+}
+.tree-view-panes {
+  counter-reset: panes;
+}
+.tree-view-panes .list-item-pane {
+  counter-increment: panes;
+}
+.tree-view-panes .list-item-pane .list-item-pane-header.header {
+  margin: 0.4ch;
+}
+.tree-view-panes .list-item-pane .list-item-pane-header.header .name {
+  font-size: 1.1em;
+  visibility: hidden;
+  position: relative;
+}
+.tree-view-panes .list-item-pane .list-item-pane-header.header::before {
+  display: flex;
+  scale: 2 1;
+  content: "pane";
+}
+.tree-view-panes .list-item-pane .list-item-pane-header.header::after {
+  content: "@" counter(panes, lower-latin);
+  display: inline-flex;
+  visibility: visible;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  translate: -50% -50%;
+}
+.tree-view-panes .list-item-pane .list-item.selected .close-button::before {
+  content: '\20DD';
+  font-size: 1rem;
+  zoom: 0.75;
+  contain: layout;
+  display: inline-flex;
+  text-align: center;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
+  -webkit-text-stroke: 0.5px;
+  position: relative;
+  right: -0.25ch;
+  font-family: SF Pro Display;
+}
+.tree-view-panes .list-item-pane .list-item .close-button::before {
+  font-family: "Material Icons";
+  contain: paint;
+  content: "close-x";
+}
+.tree-view-panes .list-item-pane .list-item .close-button {
+  order: -1;
+}
+.tree-view *,
+.tree-view *::before {
+  font-family: "SF Pro Display";
+  position: relative;
+  font-size: 0.8rem;
+  line-height: 1.1 !important;
+}
+.tree-view *::before {
+  display: inline-flex;
+  height: unset;
+  width: unset;
+}
+.tree-view * .tree-view-panes,
+.tree-view * .tree-view-root {
+  display: flex;
+  flex: 1;
+  flex-flow: column nowrap;
+  padding: 0;
+  min-height: fit-content;
+}
+.tree-view * .tree-view-panes .list-item .close-button {
+  order: -1;
+}
+.tree-view * .close-button::before {
+  font-family: "Material Icons";
+  contain: paint;
+  content: "close-x";
+}
+ol.list-tree {
+  padding-bottom: 1ch;
+  margin-bottom: -1ch;
+}
+ol.list-tree:not(.tree-view-root):not(.tree-view-panes) {
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: fit-content;
+  padding-left: calc(3.5ch - 9px);
+  min-height: 100%;
+  box-sizing: border-box !important;
+  box-sizing: content-box !important;
+  border-left: 0.5px solid;
+  pointer-events: none;
+}
+ol.list-tree:not(.tree-view-root):not(.tree-view-panes) .header {
+  flex-basis: 0;
+}
+.project-root-header + ol.list-tree {
+  border: none;
+}
+li.directory.entry.list-nested-item.project-root.selected .project-root-header.expanded::before {
+  content: "\251C\2500\252C";
+  scale: 1 1.4;
+  display: flex;
+  flex-shrink: 1;
+}
+li.directory.entry.list-nested-item.project-root.expanded::before {
+  content: "\251C\2500\252C";
+  scale: 1 1.4;
+  display: flex;
+  flex-shrink: 1;
+}
+li.directory.entry.list-nested-item.project-root.expanded:last-of-type::before {
+  content: "\251C\2500\252C";
+  scale: 1 1.4;
+  display: flex;
+  flex-shrink: 1;
+}
+li.directory.entry.list-nested-item.project-root.collapsed::before {
+  content: "\251C\2500\2500";
+  scale: 1 1.4;
+  display: inline-flex;
+  flex-shrink: 1;
+}
+li.directory.entry.list-nested-item.project-root.collapsed:last-of-type::before {
+  content: "\2514\2500\2500";
+}
+.list-group .selected::before {
+  text-indent: 4ch;
+  height: 1ch !important;
+  display: inline-flex;
+  left: 0;
+  background: none;
+  box-sizing: border-box !important;
+}
+.list-tree .selected {
+  text-indent: 4ch;
+}
+.list-tree .selected::before {
+  height: 1ch !important;
+  display: inline-flex;
+  left: 0;
+  background: none;
+  box-sizing: border-box !important;
+}
+.project-root-header {
+  display: block;
+  height: 100%;
+}
+.entry {
+  pointer-events: all;
+}
+.entry:last-of-type > ol {
+  border: none !important;
+}
+atom-workspace {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  overflow: hidden;
+  color: hsla(220, 10%, 87%, 0.9);
+  position: relative;
+  flex-direction: column;
+  font-family: Avenir, system-ui, '.SFNSText-Regular', 'SF UI Text', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
+  background: hsla(222, 7%, 5%, 0.45);
+  background-color: hsla(222, 7%, 5%, 0.45);
+  -webkit-font-smoothing: antialiased !important;
+  contain: strict;
+}
+atom-workspace atom-workspace-axis {
+  position: relative;
+  contain: layout;
+}
+atom-workspace atom-workspace-axis.horizontal {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  contain: layout;
+}
+atom-workspace atom-workspace-axis.vertical {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+}
+atom-dock.left,
+atom-dock.right {
+  background: none;
+}
+atom-dock.left .settings-view,
+atom-dock.right .settings-view {
+  width: 100%;
+  height: 100%;
+  z-index: 850;
+  contain: strict;
+}
+atom-dock.left .settings-view .section:first-child,
+atom-dock.right .settings-view .section:first-child {
+  padding: 0;
+}
+atom-dock.left .settings-view.pane-item,
+atom-dock.right .settings-view.pane-item {
+  background: none;
+}
+atom-dock.left .settings-view.pane-item .section,
+atom-dock.right .settings-view.pane-item .section {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+atom-dock.left .settings-view.pane-item .section.settings-panel,
+atom-dock.right .settings-view.pane-item .section.settings-panel {
+  border: none;
+}
+atom-dock.left .settings-view.pane-item .section.settings-panel .section-heading,
+atom-dock.right .settings-view.pane-item .section.settings-panel .section-heading {
+  font-size: 2.5rem !important;
+  padding: 0.375em;
+  margin: 0;
+  font-family: SFNS Display;
+  font-weight: 100;
+  -webkit-text-stroke: 1.2px;
+  text-shadow: 0 0 0.1px white, 0 0 1px white, 0 0 0.1em hsla(0, 0%, 100%, 0.5);
+}
+atom-dock.left .settings-view *,
+atom-dock.right .settings-view * {
+  border: none;
+  box-shadow: none;
+}
+atom-dock.left .settings-view .config-menu,
+atom-dock.right .settings-view .config-menu {
+  font-size: 0.85rem;
+  padding: 0;
+  line-height: 1.25rem;
+  border: none;
+  flex-flow: row nowrap;
+  flex-wrap: nowrap !important;
+  width: 100%;
+  overflow-x: auto;
+  scroll-padding-bottom: 13px;
+  box-sizing: content-box;
+  justify-content: space-between !important;
+  z-index: 500;
+}
+atom-dock.left .settings-view .config-menu::-webkit-scrollbar,
+atom-dock.right .settings-view .config-menu::-webkit-scrollbar {
+  display: none !important;
+}
+atom-dock.left .settings-view .config-menu .nav,
+atom-dock.right .settings-view .config-menu .nav {
+  display: flex;
+  overflow-x: auto;
+  width: 100%;
+}
+atom-dock.left .settings-view .config-menu .nav li,
+atom-dock.right .settings-view .config-menu .nav li {
+  padding: 0 2em;
+}
+atom-dock.left .settings-view .config-menu .button-area,
+atom-dock.right .settings-view .config-menu .button-area {
+  contain: layout;
+  padding: 0;
+  right: 0.5rem;
+}
+atom-dock.left .settings-view .config-menu .button-area .icon-link-external,
+atom-dock.right .settings-view .config-menu .button-area .icon-link-external {
+  margin: 0;
+  padding: 0;
+  right: 4.5rem;
+  bottom: 0.5rem;
+  width: 16px;
+  display: flex;
+  vertical-align: middle;
+  align-items: center;
+  font-size: 0 !important;
+  overflow: visible;
+  contain: layout;
+}
+atom-dock.left .settings-view .config-menu .button-area .icon-link-external::before,
+atom-dock.right .settings-view .config-menu .button-area .icon-link-external::before {
+  font-size: 0.85rem;
+  position: relative;
+  color: hsl(0, 0%, 65%);
+}
+atom-dock.left .settings-view .container.package-container,
+atom-dock.right .settings-view .container.package-container {
+  background: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 1.25em;
+  grid-auto-rows: 1fr;
+  grid-row-gap: 1em;
+}
+atom-dock.left .settings-view .container.package-container > .row,
+atom-dock.right .settings-view .container.package-container > .row {
+  flex-basis: 50%;
+}
+atom-dock.left .settings-view .package-card,
+atom-dock.right .settings-view .package-card {
+  border: none;
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 20px 10px 20px 0;
+  height: 6em;
+  min-height: fit-content;
+  contain: content;
+}
+atom-dock.left .settings-view .package-card .body,
+atom-dock.right .settings-view .package-card .body {
+  margin-right: auto;
+  margin-left: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  font-size: 0.8rem !important;
+}
+atom-dock.left .settings-view .package-card .body .package-name,
+atom-dock.right .settings-view .package-card .body .package-name {
+  font-family: SFNS Display !important;
+  font-weight: 100 !important;
+  -webkit-text-stroke: 1.1px;
+  text-shadow: 0 0 0.1em 0 0 0.1em;
+  font-size: 1em !important;
+  letter-spacing: 0.025em;
+  scale: 1 0.95;
+  display: inline-block;
+}
+atom-dock.left .settings-view .package-card .body .package-description,
+atom-dock.right .settings-view .package-card .body .package-description {
+  display: flex;
+  position: absolute;
+  margin-left: 15%;
+  width: 70%;
+  top: calc(20% + 20px);
+}
+atom-dock.left .settings-view .package-card .body h4.card-name,
+atom-dock.right .settings-view .package-card .body h4.card-name {
+  max-width: 50%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-transform: lowercase;
+}
+atom-dock.left .settings-view .package-card .meta,
+atom-dock.right .settings-view .package-card .meta {
+  position: absolute;
+  top: 0;
+  z-index: 450;
+  max-width: 100%;
+  height: 100%;
+}
+atom-dock.left .settings-view .package-card .meta .meta-controls,
+atom-dock.right .settings-view .package-card .meta .meta-controls {
+  display: contents;
+  height: 100%;
+}
+atom-dock.left .settings-view .package-card .meta .meta-controls .btn-toolbar,
+atom-dock.right .settings-view .package-card .meta .meta-controls .btn-toolbar {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+}
+atom-dock.left .settings-view .package-card .meta .meta-controls .btn-toolbar .btn-group,
+atom-dock.right .settings-view .package-card .meta .meta-controls .btn-toolbar .btn-group {
+  right: 0;
+  display: flex;
+  max-width: 25%;
+  translate: 0 -50%;
+  padding-right: 1em;
+  position: absolute;
+  margin: 0 !important;
+  align-items: flex-start;
+  flex-flow: column nowrap;
+  text-align: -webkit-right;
+  margin-top: calc(0.25em + 20px) !important;
+}
+atom-dock.left .settings-view .package-card .meta .meta-controls .btn-toolbar .btn-group .btn,
+atom-dock.right .settings-view .package-card .meta .meta-controls .btn-toolbar .btn-group .btn {
+  padding: 0.175em;
+  width: 1.5em;
+  font-size: 0.75rem;
+}
+atom-dock.left .settings-view .package-card .meta .meta-controls .btn-toolbar .btn-group .btn::before,
+atom-dock.right .settings-view .package-card .meta .meta-controls .btn-toolbar .btn-group .btn::before {
+  width: 100%;
+  font-size: 0.75rem;
+}
+atom-dock.left .settings-view .package-card .meta .meta-user,
+atom-dock.right .settings-view .package-card .meta .meta-user {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  max-width: fit-content;
+  position: absolute;
+  top: 50%;
+  margin: 0 !important;
+  box-sizing: content-box;
+  translate: -40% -50%;
+}
+atom-dock.left .settings-view .package-card .meta .meta-user .avatar,
+atom-dock.right .settings-view .package-card .meta .meta-user .avatar {
+  -webkit-mask: linear-gradient(to left, white, #00000085 100%);
+  height: 4rem;
+  width: 4rem;
+  border-radius: 1em;
+  opacity: 0.7;
+}
+atom-dock.left .settings-view .package-card .stats.pull-right,
+atom-dock.right .settings-view .package-card .stats.pull-right {
+  order: 5;
+  margin-top: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  position: absolute;
+  right: 15%;
+  top: 20px;
+  font-size: 0.9rem;
+}
+atom-dock.left .settings-view .package-card .stats .stats-item,
+atom-dock.right .settings-view .package-card .stats .stats-item {
+  display: flex !important;
+  flex-flow: row nowrap;
+}
+.alert-info,
+.settings-view .alert-info,
+.alert-warning,
+.settings-view .alert-warning,
+.alert-error,
+.settings-view .alert-error,
+.alert-success,
+.settings-view .alert-success,
+.alert-danger,
+.settings-view .alert-danger {
+  border: none;
+  background-color: hsla(220, 10%, 87%, 0.02);
+}
+.alert-info,
+.settings-view .alert-info {
+  color: hsla(220, 25%, 42%, 0.75);
+}
+.alert-warning,
+.settings-view .alert-warning {
+  color: hsla(330, 40%, 49%, 0.65);
+}
+.alert-error,
+.settings-view .alert-error,
+.alert-danger,
+.settings-view .alert-danger {
+  color: hsla(345, 40%, 50%, 0.8);
+}
+.alert-success,
+.settings-view .alert-success {
+  color: hsla(175, 58%, 37%, 0.6);
+}
+background-tips ul.background-message {
+  color: hsla(220, 10%, 87%, 0.2);
+  font-weight: 200;
+}
+ul.background-message {
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.2);
+}
+atom-notifications {
+  top: unset;
+  right: 0;
+  bottom: unset;
+  height: 85vh;
+  display: flex;
+  padding: 0 !important;
+  margin: auto 0;
+  position: fixed;
+  flex-flow: column-reverse nowrap;
+  font-size: unset;
+  overflow-y: hidden;
+  box-sizing: content-box;
+  transition: 2s linear all;
+  justify-content: center;
+  align-items: center;
+}
+atom-notifications atom-notification {
+  top: unset;
+  clear: unset;
+  float: unset;
+  width: unset;
+  margin: 0.5em 0 0 0;
+  padding: 0 0 0 1em;
+  overflow: hidden;
+  position: relative;
+  flex-basis: 2.5vh;
+  transition: 2s linear all 1.2s, 1s linear translate 4s;
+  color: hsl(220, 1%, 97%);
+  max-height: min-content;
+  will-change: height, opacity;
+}
+atom-notifications atom-notification:hover {
+  flex-grow: 1;
+  flex-shrink: 0.001;
+  opacity: 1;
+  filter: brightness(1.2);
+  transition: 2s linear all 1.2s, 1s linear translate 4s;
+}
+atom-notifications atom-notification:hover .content,
+atom-notifications atom-notification:hover .message,
+atom-notifications atom-notification:hover .detail,
+atom-notifications atom-notification:hover .meta {
+  transition: 1s ease all 1.2s, 1s ease height 1.2s;
+  will-change: height, opacity, scale, translate;
+}
+atom-notifications atom-notification:hover .message {
+  max-height: fit-content;
+  max-width: 100%;
+}
+atom-notifications atom-notification:hover .detail .detail-content {
+  scale: 1 1;
+  opacity: 1;
+  translate: 0 -10%;
+}
+atom-notifications atom-notification:hover .meta {
+  scale: 1 1;
+  opacity: 1;
+  translate: 0 -10%;
+}
+atom-notifications atom-notification:not(:hover) {
+  flex-grow: 0.001;
+  flex-shrink: 1;
+  opacity: 0.7;
+  color: hsl(220, 1%, 97%);
+  transition: 2s linear all 3s, 0.5s linear translate 3s;
+}
+atom-notifications atom-notification:not(:hover) .content,
+atom-notifications atom-notification:not(:hover) .message,
+atom-notifications atom-notification:not(:hover) .detail,
+atom-notifications atom-notification:not(:hover) .meta {
+  transition: 1s ease all 3s, 1s ease height 3s;
+  will-change: height, opacity, scale, translate;
+}
+atom-notifications atom-notification:not(:hover) .close-icon {
+  opacity: 0;
+}
+atom-notifications atom-notification:not(:hover) .content {
+  max-width: 15vw;
+}
+atom-notifications atom-notification:not(:hover) .message {
+  max-height: 5em;
+  max-width: 15vw;
+}
+atom-notifications atom-notification:not(:hover) .detail .detail-content {
+  scale: 1 0;
+  translate: 0 -10%;
+}
+atom-notifications atom-notification:not(:hover) .meta {
+  scale: 1 0;
+  translate: 0 -10%;
+}
+atom-notifications:hover atom-notification,
+atom-notifications:focus atom-notification {
+  flex-grow: 1;
+  flex-shrink: 0.001;
+  opacity: 1;
+  filter: brightness(1.2);
+  transition: 2s linear all 1.2s, 1s linear translate 4s;
+}
+atom-notifications:hover atom-notification .content,
+atom-notifications:focus atom-notification .content,
+atom-notifications:hover atom-notification .message,
+atom-notifications:focus atom-notification .message,
+atom-notifications:hover atom-notification .detail,
+atom-notifications:focus atom-notification .detail,
+atom-notifications:hover atom-notification .meta,
+atom-notifications:focus atom-notification .meta {
+  transition: 1s ease all 1.2s, 1s ease height 1.2s;
+  will-change: height, opacity, scale, translate;
+}
+atom-notifications:hover atom-notification:hover,
+atom-notifications:focus atom-notification:hover {
+  flex-grow: 1;
+  flex-shrink: 0.001;
+  opacity: 1;
+  filter: brightness(1.2);
+  transition: 2s linear all 1.2s, 1s linear translate 4s;
+}
+atom-notifications:hover atom-notification:hover .content,
+atom-notifications:focus atom-notification:hover .content,
+atom-notifications:hover atom-notification:hover .message,
+atom-notifications:focus atom-notification:hover .message,
+atom-notifications:hover atom-notification:hover .detail,
+atom-notifications:focus atom-notification:hover .detail,
+atom-notifications:hover atom-notification:hover .meta,
+atom-notifications:focus atom-notification:hover .meta {
+  transition: 1s ease all 1.2s, 1s ease height 1.2s;
+  will-change: height, opacity, scale, translate;
+}
+atom-notifications:hover atom-notification:hover .message,
+atom-notifications:focus atom-notification:hover .message {
+  max-height: fit-content;
+  max-width: 100%;
+}
+atom-notifications:hover atom-notification:hover .detail .detail-content,
+atom-notifications:focus atom-notification:hover .detail .detail-content {
+  scale: 1 1;
+  opacity: 1;
+  translate: 0 -10%;
+}
+atom-notifications:hover atom-notification:hover .meta .detail-content,
+atom-notifications:focus atom-notification:hover .meta .detail-content {
+  scale: 1 1;
+  opacity: 1;
+  translate: 0 -10%;
+}
+atom-notifications:hover atom-notification:not(:hover),
+atom-notifications:focus atom-notification:not(:hover) {
+  flex-grow: 0.001;
+  flex-shrink: 1;
+  opacity: 0.7;
+  color: hsl(220, 1%, 97%);
+  transition: 2s linear all 3s, 0.5s linear translate 3s;
+}
+atom-notifications:hover atom-notification:not(:hover) .content,
+atom-notifications:focus atom-notification:not(:hover) .content,
+atom-notifications:hover atom-notification:not(:hover) .message,
+atom-notifications:focus atom-notification:not(:hover) .message,
+atom-notifications:hover atom-notification:not(:hover) .detail,
+atom-notifications:focus atom-notification:not(:hover) .detail,
+atom-notifications:hover atom-notification:not(:hover) .meta,
+atom-notifications:focus atom-notification:not(:hover) .meta {
+  transition: 1s ease all 3s, 1s ease height 3s;
+  will-change: height, opacity, scale, translate;
+}
+atom-notifications:hover atom-notification:not(:hover) .close-icon,
+atom-notifications:focus atom-notification:not(:hover) .close-icon {
+  opacity: 0;
+}
+atom-notifications:hover atom-notification:not(:hover) .content,
+atom-notifications:focus atom-notification:not(:hover) .content {
+  max-width: 15vw;
+}
+atom-notifications:hover atom-notification:not(:hover) .message,
+atom-notifications:focus atom-notification:not(:hover) .message {
+  max-height: 5em;
+  max-width: 15vw;
+}
+atom-notifications:hover atom-notification:not(:hover) .detail .detail-content,
+atom-notifications:focus atom-notification:not(:hover) .detail .detail-content {
+  scale: 1 0;
+  translate: 0 -10%;
+}
+atom-notifications:hover atom-notification:not(:hover) .meta,
+atom-notifications:focus atom-notification:not(:hover) .meta {
+  scale: 1 0;
+  translate: 0 -10%;
+}
+atom-notifications:not(:hover) atom-notification {
+  flex-grow: 0.001;
+  flex-shrink: 1;
+  opacity: 0.7;
+  color: hsl(220, 1%, 97%);
+  transition: 2s linear all 3s, 0.5s linear translate 3s;
+}
+atom-notifications:not(:hover) atom-notification .content,
+atom-notifications:not(:hover) atom-notification .message,
+atom-notifications:not(:hover) atom-notification .detail,
+atom-notifications:not(:hover) atom-notification .meta {
+  transition: 1s ease all 3s, 1s ease height 3s;
+  will-change: height, opacity, scale, translate;
+}
+atom-notifications:not(:hover) atom-notification .close-icon {
+  opacity: 0;
+}
+atom-notifications:not(:hover) atom-notification .content {
+  max-width: 15vw;
+}
+atom-notifications:not(:hover) atom-notification:hover {
+  flex-grow: 1;
+  flex-shrink: 0.001;
+  opacity: 1;
+  filter: brightness(1.2);
+  transition: 2s linear all 1.2s, 1s linear translate 4s;
+}
+atom-notifications:not(:hover) atom-notification:hover .content,
+atom-notifications:not(:hover) atom-notification:hover .message,
+atom-notifications:not(:hover) atom-notification:hover .detail,
+atom-notifications:not(:hover) atom-notification:hover .meta {
+  transition: 1s ease all 1.2s, 1s ease height 1.2s;
+  will-change: height, opacity, scale, translate;
+}
+atom-notifications:not(:hover) atom-notification:hover .message {
+  max-height: fit-content;
+  max-width: 100%;
+}
+atom-notifications:not(:hover) atom-notification:hover .detail .detail-content {
+  scale: 1 1;
+  opacity: 1;
+  translate: 0 -10%;
+}
+atom-notifications:not(:hover) atom-notification:hover .meta {
+  scale: 1 1;
+  opacity: 1;
+  translate: 0 -10%;
+}
+atom-notifications:not(:hover) atom-notification:not(:hover) {
+  flex-grow: 0.001;
+  flex-shrink: 1;
+  opacity: 0.7;
+  color: hsl(220, 1%, 97%);
+  transition: 2s linear all 3s, 0.5s linear translate 3s;
+}
+atom-notifications:not(:hover) atom-notification:not(:hover) .content,
+atom-notifications:not(:hover) atom-notification:not(:hover) .message,
+atom-notifications:not(:hover) atom-notification:not(:hover) .detail,
+atom-notifications:not(:hover) atom-notification:not(:hover) .meta {
+  transition: 1s ease all 3s, 1s ease height 3s;
+  will-change: height, opacity, scale, translate;
+}
+atom-notifications:not(:hover) atom-notification:not(:hover) .close-icon {
+  opacity: 0;
+}
+atom-notifications:not(:hover) atom-notification:not(:hover) .content {
+  max-width: 15vw;
+}
+atom-notifications:not(:hover) atom-notification:not(:hover) .message {
+  max-height: 5em;
+  max-width: 15vw;
+}
+atom-notifications:not(:hover) atom-notification:not(:hover) .detail .detail-content {
+  scale: 1 0;
+  translate: 0 -10%;
+}
+atom-notifications:not(:hover) atom-notification:not(:hover) .meta {
+  scale: 1 0;
+  translate: 0 -10%;
+}
+atom-notifications atom-notification {
+  background-color: hsla(208, 10%, 5%, 0.5);
+  border-radius: 0.5em;
+  filter: drop-shadow(0 0 0.001 black);
+  z-index: 500;
+}
+atom-notifications atom-notification,
+atom-notifications atom-notification.error,
+atom-notifications atom-notification.fatal,
+atom-notifications atom-notification.info,
+atom-notifications atom-notification.success,
+atom-notifications atom-notification.warning {
+  white-space: normal;
+}
+atom-notifications atom-notification .content,
+atom-notifications atom-notification.error .content,
+atom-notifications atom-notification.fatal .content,
+atom-notifications atom-notification.info .content,
+atom-notifications atom-notification.success .content,
+atom-notifications atom-notification.warning .content {
+  display: flex;
+  flex-flow: column nowrap;
+  max-height: min-content;
+  background-color: transparent;
+  justify-content: flex-start;
+}
+atom-notifications atom-notification .content .item,
+atom-notifications atom-notification.error .content .item,
+atom-notifications atom-notification.fatal .content .item,
+atom-notifications atom-notification.info .content .item,
+atom-notifications atom-notification.success .content .item,
+atom-notifications atom-notification.warning .content .item {
+  padding: 0.8em;
+}
+atom-notifications atom-notification .content > *,
+atom-notifications atom-notification.error .content > *,
+atom-notifications atom-notification.fatal .content > *,
+atom-notifications atom-notification.info .content > *,
+atom-notifications atom-notification.success .content > *,
+atom-notifications atom-notification.warning .content > * {
+  background: transparent;
+}
+atom-notifications atom-notification .content .message,
+atom-notifications atom-notification.error .content .message,
+atom-notifications atom-notification.fatal .content .message,
+atom-notifications atom-notification.info .content .message,
+atom-notifications atom-notification.success .content .message,
+atom-notifications atom-notification.warning .content .message {
+  color: hsla(220, 5%, 66%, 0.9);
+  margin: 0;
+  display: flex;
+  font-size: 1.075vh;
+  overflow-x: auto;
+  overflow-y: hidden;
+  font-family: SFNS Display;
+  font-weight: 300;
+  padding-top: 1em;
+  align-items: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  letter-spacing: 0.05em;
+  text-transform: lowercase;
+  -webkit-text-stroke: 0.6px hsla(220, 10%, 87%, 0.9);
+}
+atom-notifications atom-notification .content .message p,
+atom-notifications atom-notification.error .content .message p,
+atom-notifications atom-notification.fatal .content .message p,
+atom-notifications atom-notification.info .content .message p,
+atom-notifications atom-notification.success .content .message p,
+atom-notifications atom-notification.warning .content .message p {
+  display: contents;
+}
+atom-notifications atom-notification .content .detail,
+atom-notifications atom-notification.error .content .detail,
+atom-notifications atom-notification.fatal .content .detail,
+atom-notifications atom-notification.info .content .detail,
+atom-notifications atom-notification.success .content .detail,
+atom-notifications atom-notification.warning .content .detail {
+  display: contents;
+}
+atom-notifications atom-notification .content .detail .detail-content,
+atom-notifications atom-notification.error .content .detail .detail-content,
+atom-notifications atom-notification.fatal .content .detail .detail-content,
+atom-notifications atom-notification.info .content .detail .detail-content,
+atom-notifications atom-notification.success .content .detail .detail-content,
+atom-notifications atom-notification.warning .content .detail .detail-content {
+  font-size: 0.9vh !important;
+  background-color: hsla(208, 10%, 6%, 0.3) !important;
+  max-height: min-content;
+  white-space: normal;
+  padding: 1em;
+  opacity: 0.9;
+  transition: 1s ease all;
+}
+atom-notifications atom-notification .content .meta,
+atom-notifications atom-notification.error .content .meta,
+atom-notifications atom-notification.fatal .content .meta,
+atom-notifications atom-notification.info .content .meta,
+atom-notifications atom-notification.success .content .meta,
+atom-notifications atom-notification.warning .content .meta,
+atom-notifications atom-notification .content .meta *,
+atom-notifications atom-notification.error .content .meta *,
+atom-notifications atom-notification.fatal .content .meta *,
+atom-notifications atom-notification.info .content .meta *,
+atom-notifications atom-notification.success .content .meta *,
+atom-notifications atom-notification.warning .content .meta * {
+  font-family: Inconsolata;
+}
+atom-notifications atom-notification .content .meta .description,
+atom-notifications atom-notification.error .content .meta .description,
+atom-notifications atom-notification.fatal .content .meta .description,
+atom-notifications atom-notification.info .content .meta .description,
+atom-notifications atom-notification.success .content .meta .description,
+atom-notifications atom-notification.warning .content .meta .description {
+  font-size: 0.9vh;
+  font-weight: 100;
+  text-transform: lowercase;
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+atom-notifications atom-notification .content .meta .description p,
+atom-notifications atom-notification.error .content .meta .description p,
+atom-notifications atom-notification.fatal .content .meta .description p,
+atom-notifications atom-notification.info .content .meta .description p,
+atom-notifications atom-notification.success .content .meta .description p,
+atom-notifications atom-notification.warning .content .meta .description p {
+  font-size: 0.9vh;
+}
+atom-notifications atom-notification .content .meta .description ul,
+atom-notifications atom-notification.error .content .meta .description ul,
+atom-notifications atom-notification.fatal .content .meta .description ul,
+atom-notifications atom-notification.info .content .meta .description ul,
+atom-notifications atom-notification.success .content .meta .description ul,
+atom-notifications atom-notification.warning .content .meta .description ul {
+  padding: 0.1em;
+}
+atom-notifications atom-notification * ul,
+atom-notifications atom-notification.error * ul,
+atom-notifications atom-notification.fatal * ul,
+atom-notifications atom-notification.info * ul,
+atom-notifications atom-notification.success * ul,
+atom-notifications atom-notification.warning * ul {
+  list-style-type: none;
+}
+atom-notifications atom-notification * ul li::before,
+atom-notifications atom-notification.error * ul li::before,
+atom-notifications atom-notification.fatal * ul li::before,
+atom-notifications atom-notification.info * ul li::before,
+atom-notifications atom-notification.success * ul li::before,
+atom-notifications atom-notification.warning * ul li::before {
+  content: "\f078";
+  font-family: "Octicons Regular";
+  display: inline-block;
+  position: relative;
+  top: 0.13em;
+  right: 0;
+  padding-right: 0.5em;
+}
+atom-notifications atom-notification strong,
+atom-notifications atom-notification.error strong,
+atom-notifications atom-notification.fatal strong,
+atom-notifications atom-notification.info strong,
+atom-notifications atom-notification.success strong,
+atom-notifications atom-notification.warning strong {
+  font-weight: 100;
+  text-shadow: 0 0 0.01px, 0 0 0.005px;
+}
+atom-notifications atom-notification.icon::before,
+atom-notifications atom-notification.error.icon::before,
+atom-notifications atom-notification.fatal.icon::before,
+atom-notifications atom-notification.info.icon::before,
+atom-notifications atom-notification.success.icon::before,
+atom-notifications atom-notification.warning.icon::before {
+  opacity: 0.5;
+}
+atom-notifications atom-notification .close,
+atom-notifications atom-notification.error .close,
+atom-notifications atom-notification.fatal .close,
+atom-notifications atom-notification.info .close,
+atom-notifications atom-notification.success .close,
+atom-notifications atom-notification.warning .close {
+  color: white;
+}
+atom-notifications atom-notification :empty,
+atom-notifications atom-notification.error :empty,
+atom-notifications atom-notification.fatal :empty,
+atom-notifications atom-notification.info :empty,
+atom-notifications atom-notification.success :empty,
+atom-notifications atom-notification.warning :empty {
+  display: none;
+}
+atom-notifications atom-notification.info .content .detail {
+  color: hsla(220, 25%, 42%, 0.75);
+}
+atom-notifications atom-notification.info .content .meta {
+  color: gray;
+}
+atom-notifications atom-notification.info .content .meta .description p,
+atom-notifications atom-notification.info .content .meta p {
+  color: hsla(220, 25%, 42%, 0.75);
+  font-size: 1vh;
+  font-weight: 100;
+}
+atom-notifications atom-notification.success {
+  box-shadow: inset 40px 0 40px -38px hsla(175, 58%, 37%, 0.6);
+  border: 0.5px solid transparent;
+  border-left: none;
+}
+atom-notifications atom-notification.success .content {
+  color: hsla(175, 58%, 37%, 0.6);
+}
+atom-notifications atom-notification.warning .content {
+  color: hsla(330, 40%, 49%, 0.65);
+}
+atom-notifications atom-notification.error {
+  box-shadow: inset 5px 0 5px -4px hsla(340, 80%, 40%, 0.75);
+}
+atom-notifications atom-notification.error .content {
+  color: hsla(345, 40%, 50%, 0.8);
+}
+atom-notifications atom-notification.error .content .detail .detail-content {
+  color: hsla(345, 40%, 50%, 0.8);
+}
+atom-notifications atom-notification.error code {
+  background: hsl(340, 100%, 30%);
+  color: gray;
+}
+atom-notifications atom-notification.fatal .content {
+  color: hsl(0, 100%, 50%);
+}
+atom-notifications atom-notification.fatal .content .detail .detail-content {
+  color: hsla(353, 70%, 50%, 0.95);
+}
+atom-notifications atom-notification.fatal .content .detail .stack-toggle {
+  margin: 0;
+  font-size: 0;
+  width: fit-content;
+  margin: 0 auto;
+  display: block;
+}
+atom-notifications atom-notification.fatal .content .detail .stack-container {
+  background: hsla(0, 0%, 2%, 0.15);
+  white-space: pre-line;
+  color: hsl(355, 90%, 55%);
+  padding: 0 1em;
+  margin: 0;
+}
+atom-notifications atom-notification.fatal .content .detail .stack-container .line {
+  padding: 0 1em;
+  max-width: 90%;
+  margin: 0 auto;
+  font-size: 1.25em;
+  overflow: hidden;
+}
+atom-notifications atom-notification.fatal .content .meta {
+  color: gray;
+  font-family: Avenir;
+}
+atom-notifications atom-notification.fatal .content .meta a {
+  color: hsla(347, 70%, 50%, 0.95);
+}
+atom-notifications atom-notification:not(:hover) .close-all.btn,
+atom-notifications atom-notification .close-all.btn:not(:hover),
+atom-notifications atom-notification:not(:hover) .close-all.btn::before,
+atom-notifications atom-notification .close-all.btn:not(:hover)::before {
+  min-width: 50%;
+  height: 100%;
+  background-color: transparent;
+  display: block;
+  min-width: 2vw;
+  min-height: 2vw;
+}
+atom-notifications atom-notification .close:empty {
+  position: absolute;
+  min-width: 100%;
+  height: 100%;
+  background-color: transparent;
+  display: block;
+}
+atom-notifications atom-notification .close:empty::before {
+  content: "";
+}
+atom-notifications atom-notification .close-all.btn {
+  align-items: center;
+  color: hsla(220, 4.5%, 50%, 0.9) !important;
+  display: flex;
+  font-size: 1rem;
+  justify-content: flex-end;
+  line-height: 1;
+  margin: 0;
+  min-height: 1em;
+  min-width: 1em;
+  padding: 2px;
+  position: fixed !important;
+  right: 0 !important;
+  top: 0 !important;
+  bottom: unset !important;
+  left: unset !important;
+}
+atom-notifications atom-notification .close-all.btn:before {
+  all: unset;
+  content: "close";
+  font-family: "Material Icons";
+  font-size: 0.9vh;
+  display: block;
+  align-items: center;
+  vertical-align: middle;
+  padding-right: 0.5em;
+  position: absolute !important;
+  right: 0;
+  top: 0;
+}
+atom-notifications atom-notification .close-all.btn:after {
+  content: "";
+  font-size: 0.9vh;
+  position: fixed !important;
+  right: 0;
+  top: 0;
+}
+.loading-spinner-large {
+  display: block;
+  width: 64px;
+  height: 64px;
+  background-image: url(images/octocat-spinner-128.gif);
+  background-repeat: no-repeat;
+  background-size: 64px 64px;
+}
+.loading-spinner-large.inline-block {
+  display: inline-block;
+}
+.loading-spinner-medium {
+  display: block;
+  width: 48px;
+  height: 48px;
+  background-image: url(images/octocat-spinner-128.gif);
+  background-repeat: no-repeat;
+  background-size: 48px 48px;
+}
+.loading-spinner-medium.inline-block {
+  display: inline-block;
+}
+.loading-spinner-small {
+  display: block;
+  width: 32px;
+  height: 32px;
+  background-image: url(images/octocat-spinner-128.gif);
+  background-repeat: no-repeat;
+  background-size: 32px 32px;
+}
+.loading-spinner-small.inline-block {
+  display: inline-block;
+}
+.loading-spinner-tiny {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-image: url(images/octocat-spinner-128.gif);
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+}
+.loading-spinner-tiny.inline-block {
+  display: inline-block;
+}
+.tooltip .tooltip-inner {
+  line-height: 1;
+  padding: 0.75em;
+  white-space: nowrap;
+  max-width: none;
+}
+.tooltip .keystroke {
+  padding: 0.15em 0.4em;
+  margin: 0 -0.3em 0 0.25em;
+  border-radius: 2px;
+  color: gray;
+  background: hsla(0, 0%, 0%, 0.1) !important;
+}
+.tooltip {
+  all: initial;
+  position: absolute;
+  z-index: 1070;
+  display: block;
+  font-family: Avenir, system-ui, '.SFNSText-Regular', 'SF UI Text', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
+  font-size: calc(0.16vh + 0.9vw);
+  opacity: 0;
+}
+.tooltip.in {
+  opacity: 0.9;
+}
+.tooltip.top {
+  margin-top: -3px;
+  padding: 5px 0;
+}
+.tooltip.right {
+  margin-left: 3px;
+  padding: 0 5px;
+}
+.tooltip.bottom {
+  margin-top: 3px;
+  padding: 5px 0;
+}
+.tooltip.left {
+  margin-left: -3px;
+  padding: 0 5px;
+}
+.tooltip-inner {
+  max-width: 200px;
+  padding: 3px 8px;
+  color: #fff;
+  text-align: center;
+  background-color: hsla(0, 0%, 0%, 0.1) !important;
+  border-radius: 2px;
+  opacity: 0.9;
+}
+.tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+.tooltip.top .tooltip-arrow {
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: hsla(0, 0%, 0%, 0.1) !important;
+}
+.tooltip.top-left .tooltip-arrow {
+  bottom: 0;
+  right: 5px;
+  margin-bottom: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: hsla(0, 0%, 0%, 0.1) !important;
+}
+.tooltip.top-right .tooltip-arrow {
+  bottom: 0;
+  left: 5px;
+  margin-bottom: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: hsla(0, 0%, 0%, 0.1) !important;
+}
+.tooltip.right .tooltip-arrow {
+  top: 50%;
+  left: 0;
+  margin-top: -5px;
+  border-width: 5px 5px 5px 0;
+  border-right-color: hsla(0, 0%, 0%, 0.1) !important;
+}
+.tooltip.left .tooltip-arrow {
+  top: 50%;
+  right: 0;
+  margin-top: -5px;
+  border-width: 5px 0 5px 5px;
+  border-left-color: hsla(0, 0%, 0%, 0.1) !important;
+}
+.tooltip.bottom .tooltip-arrow {
+  top: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: hsla(0, 0%, 0%, 0.1) !important;
+}
+.tooltip.bottom-left .tooltip-arrow {
+  top: 0;
+  right: 5px;
+  margin-top: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: hsla(0, 0%, 0%, 0.1) !important;
+}
+.tooltip.bottom-right .tooltip-arrow {
+  top: 0;
+  left: 5px;
+  margin-top: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: hsla(0, 0%, 0%, 0.1) !important;
+}

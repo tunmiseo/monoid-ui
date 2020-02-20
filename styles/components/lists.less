@@ -1,0 +1,293 @@
+// main: index.less
+@import (reference) '../ui-variables'; // Lists
+@import (reference) '../ui-mixins';
+// -------------------
+// Used in different places, like the Tree View, Commmand Palette etc.
+// Overrides: atom/static/lists.less
+// List Group -------------------
+@no-indent: {
+  .outside(0) !important;
+  .fore(0) !important;
+};
+
+@list-item-icon: {
+  .icon {
+    &::before {
+      margin-right: 1px;
+      top: 50%;
+      translate: 0 -50%;
+      display: inline-flex;
+      vertical-align: middle;
+      align-items: center;
+      line-height: 15px;
+0
+      height: 15px;
+    }
+  }
+};
+
+@selected-item: {
+  .selected {
+    &::before {
+      height: 15px;
+      border-radius: 0.15em;
+      background-color: hsla(220, 6%, 32%, 0.8);
+      filter: brightness(2);
+    }
+  }
+};
+@nested-item: {
+  &.list-nested-item {
+    > .list-item {
+      white-space: nowrap;
+      line-height: 15px;
+    }
+  }
+
+  &:not(.list-nested-item) {
+    white-space: nowrap;
+    line-height: 15px;
+  }
+};
+
+.list-group {
+  ol {
+    .fore(2rem) !important;
+  }
+  @list-item-icon();
+  @selected-item();
+  @nested-item();
+
+  li {
+    @no-indent();
+    // We want to highlight the background of the list items because we dont know their size.
+    // &.selected {
+    //   color: @text-color-selected;
+    //   background-color: @background-color-selected;
+    //
+    //   &:before {
+    //     display: none;
+    //   }
+    // }
+  }
+}
+// List Tree -------------------
+
+.list-tree {
+  .hp(0);
+
+  [class*=tree-view-panes] &,
+  [is=tree-view-directory] & {
+    .fore(0) !important;
+  }
+  color: @text-color;
+
+  .icon {
+    &::before {
+
+      top: 50%;
+      translate: 0 -50%;
+      display: inline-flex;
+      vertical-align: middle;
+      align-items: center;
+      line-height: 15px;
+      height: 15px;
+    }
+  }
+  @list-item-icon();
+  @selected-item();
+  @nested-item();
+
+  li {
+    @no-indent();
+
+    > .header.list-item.project-root-header {
+      line-height: 15px;
+      height: 15px;
+      width: fit-content;
+      display: inline-flex;
+      align-items: center;
+      vertical-align: middle;
+
+
+      span {
+        line-height: 15;
+        height: 15px;
+        width: fit-content;
+        display: inline-flex;
+        align-items: center;
+        vertical-align: middle;
+
+      }
+    }
+  }
+}
+// Select List -------------------
+
+.select-list {
+  li {
+    padding: @component-padding/2 @component-padding;
+  }
+
+  .status {
+    float: right;
+  }
+}
+// Popover List -------------------
+// Used as a popover for something like autocomplete.
+
+.select-list.popover-list {
+  @popover-list-padding: @component-padding/2;
+  padding: @popover-list-padding;
+  border-radius: @component-border-radius;
+  background-color: @overlay-background-color;
+  box-shadow: 0 2px 8px 1px hsla(0,0%,0%,.3);
+
+  .list-group {
+    margin-top: @popover-list-padding;
+
+    li {
+      padding-left: @popover-list-padding;
+    }
+  }
+}
+// General Lists
+@drop-duration: 0.2s;
+@height: -25px;
+
+.expanded .list-item-pane-header + ol,
+.list-item + ol > li.expanded {
+  & .list-item {
+    // .slide-down(@delay:calc(~"5s/(var(--order)*var(--order))"));
+    // --return: calc(~"5s/(var(--order)*var(--order))");
+  }
+
+  & .file span {
+    display: block;
+  }
+
+  & .header span {
+    display: inline-block;
+  }
+  // & .directory span {
+  //   display: inline-block;
+  // }
+}
+// List Slide-Down Animation
+// List Slide-Down Animation
+@file      : ~".list-item";
+@header    : ~".header";
+@directory : ~".directory";
+@selector  : ~".list-item + ol > li:nth-child";
+@slide-rate: .025;
+@slide-down: {
+
+  @{selector}(@{k})@{file},
+  @{selector}(@{k})@{directory},
+  @{selector}(@{k})@{header} {
+
+    @delay: @k * @slide-rate;
+    transition: all @drop-duration ease;
+    //z-index: ~"@{k}";
+
+    &, > * {
+      transition-delay:~"@{delay}s";
+      animation-delay:~"@{delay}s";
+    }
+
+  }
+};
+.for(1, 15, @rules: @slide-down,);
+.for(16, 30, @rules: @slide-down,);
+
+/* Lists */
+[class*="list"][class*="item"] {
+    &,
+    &::before {
+        display   : inline-flex;
+        position  : relative;
+        max-height: fit-content;
+    }
+    &::before {
+        text-indent: calc(- 1.5em);
+    }
+    .name {
+        width: fit-content;
+        cursor: pointer;
+        max-width: 12vw;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow-x: hidden;
+        &:hover {
+            overflow-x: auto;
+        }
+    }
+    .header::before,
+    .name::before {
+        display: none !important;
+    }
+
+    &[class*="list-item"]:not([class*="nested"]):not(.header) {
+        max-height  : 1.1rem;
+        flex        : 1;
+        padding     : 0 !important;
+        margin-left : 0 !important;
+        margin-right: auto;
+
+        &,
+        &::before {
+            position   : relative;
+            display    : inline-flex;
+            flex-flow  : row wrap;
+            align-items: center;
+        }
+
+        &::before {
+            content: "\251C\2500\2500";
+            height : 1.1rem;
+        }
+
+        &:last-of-type::before {
+            content: "\2514\2500\2500";
+
+        }
+    }
+
+
+    &[class*="nested"] {
+        .header {
+            max-height  : 1.1rem;
+            margin-right: auto;
+            min-width   : fit-content;
+        }
+
+        &,
+        &::before {
+            position: relative;
+            display : inline-flex;
+        }
+
+        &::before {
+            flex-flow: row nowrap;
+
+            .collapsed& {
+                content: "\251C\2500\2500";
+            }
+
+            .expanded& {
+                content: "\251C\2500\252C";
+                scale  : 1 1.1;
+                height : 1.1rem;
+            }
+        }
+
+        .collapsed {
+            flex-flow: row nowrap;
+            height   : 1.1rem;
+        }
+        flex-flow   : row wrap;
+        align-items: center;
+        padding-left: 0 !important;
+        text-indent: 1ch;
+    }
+}

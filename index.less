@@ -1,9 +1,48 @@
+// out: ./monoid.css, sourcemap: true,compress: true
+
 // UI Theme
 // -------------------
+// .styles(@sub) {
+//     @r:  ~"styles/@{sub}";
+//     each(@r, .(@v) {
+//         --v: 5;
+//     });
+//     .import(@s...) {
+//
+    // }
+//
+//     @styles: {
+//         @core: base workspace editor, core;
+//         @components
+//             @views:
+//         buttons cursors docks dropdowns, components @packages: @aux:fonts icons symbols, aux @events:notifications alerts messsages tooltips, events .core: .styles(@core)[];
+//         @core: e("styles/core");
+//     }
+// }
 
-// This is the main file that imports all the Less files from the `/styles` directory.
+//@import "styles/aux/index";
+//@import (reference) "styles/ui-variables";
+// @import (reference) "styles/ui-mixins";
+@import "styles/core/index";
+@import "styles/components/index";
+@import "styles/events/index";
+//@import "styles/packages/index";
+//@import "styles/components/index.css";
 
-// For more infos about creating themes, check out:
-// http://flight-manual.atom.io/hacking-atom/sections/creating-a-theme
 
-@import "styles/ui-variables";
+
+// @plugin "styles/plugins/globals";
+// @cheese: 5;
+//
+// html {
+//     @plugin "styles/plugins/globals";
+//     --test: foo();
+// }
+// @plugin "styles/plugins/globals";
+// @var: 32;
+// // store(@var);
+//
+// .get-my-values {
+//     @plugin "styles/plugins/globals.js";
+//     // values: retrieve();
+// }
