@@ -1,10 +1,4 @@
 
-// UI Variables
-// -------------------
-
-// gruvbox palette, from vim theme by Pavel Pertsev:
-// https://github.com/morhetz/gruvbox
-
 @ui-bg: @ui-bg0;
 @ui-bg0: #282828;
 @ui-bg0_h: #1d2021;
@@ -14,12 +8,23 @@
 @ui-bg3: #665c54;
 @ui-bg4: #7c6f64;
 
+@ui-fg1: #ebdbb2;
+@color16:"#ff8700"; // Base 09
+@color17:"#d65d0e"; // Base 0F
+@color18:"#3a3a3a"; // Base 01
+@color19:"#4e4e4e"; // Base 02
+@color20:"#949494"; // Base 04
+@ui-fg2:"#d5c4a1"; // Base 06
+@color_foreground:"dab997" ;// Base 05
+@color_background:"262626" ;// Base 00
+
 @ui-fg: @ui-fg2;
 @ui-fg0: #fbf1c7;
 @ui-fg1: #ebdbb2;
 @ui-fg2: #d5c4a1;
 @ui-fg3: #bdae93;
 @ui-fg4: #a89984;
+
 
 @ui-gray: #928374;
 @ui-gray-bright: #a89984;
@@ -37,6 +42,24 @@
 @ui-aqua-bright: #8ec07c;
 @ui-orange: #d65d0e;
 @ui-orange-bright: #fe8019;
+
+@ui-red:"#d75f5f"  // Base 08 - Red
+@ui-green:"#afaf00"  // Base 0B - Green
+@ui-yellow:"#ffaf00"  // Base 0A - Yellow
+@ui-blue:"#83adad"  // Base 0D - Blue
+@ui-magenta:"#d485ad"  // Base 0E - Magenta
+@ui-aqua:"#85ad85"  // Base 0C - Cyan
+@ui-white:"#dab997"  // Base 05 - White
+@ui-gray:"#8a8a8a"  // Base 03 - Bright Black
+
+@ui-red-bright:"#d75f5f"  // Base 08 - Red
+@ui-green-bright:"#afaf00"  // Base 0B - Green
+@ui-yellow-bright:"#ffaf00"  // Base 0A - Yellow
+@ui-blue-bright:"#83adad"  // Base 0D - Blue
+@ui-magenta-bright:"#d485ad"  // Base 0E - Magenta
+@ui-aqua-bright:"#85ad85"  // Base 0C - Cyan
+@ui-white-bright:"#dab997"  // Base 05 - White
+@ui-gray-bright:"#8a8a8a"  // Base 03 - Bright Black
 
 
 // Text Colors
@@ -66,30 +89,30 @@
 
 // Base colors
 @base-background-color: @ui-bg;
-@base-border-color:     @ui-bg0_h;
+@base-border-color:     transparent;
 
 // Component colors
-@pane-item-background-color: @base-background-color;
+@pane-item-background-color: transparent;
 @pane-item-border-color:     @base-border-color;
 
-@input-background-color: @ui-bg1;
+@input-background-color: transparent;
 @input-border-color:     @base-border-color;
 
-@tool-panel-background-color: @ui-bg0_s;
+@tool-panel-background-color: transparent;
 @tool-panel-border-color:     @base-border-color;
 
-@inset-panel-background-color: @ui-bg1;
+@inset-panel-background-color: transparent;
 @inset-panel-border-color:     @base-border-color;
 
-@panel-heading-background-color: @ui-bg1;
+@panel-heading-background-color: transparent;
 @panel-heading-border-color:     @base-border-color;
 
 @overlay-background-color: @ui-bg1;
 @overlay-background-color-selected: @ui-bg2;
-@overlay-border-color:     @base-border-color;
+@overlay-border-color:     @bsase-border-color;
 
-@button-background-color:          @ui-bg2;
-@button-background-color-hover:    @ui-bg3;
+@button-background-color:          transparent;
+@button-background-color-hover:    @ui-bg2;
 @button-background-color-selected: @button-background-color-hover;
 @button-border-color:              @base-border-color;
 
@@ -118,7 +141,7 @@
 @component-padding: 10px;
 @component-icon-padding: 5px;
 @component-icon-size: 16px;
-@component-line-height: 25px;
+@component-line-height: 1;
 
 // Tabs
 @tab-height: 25px;
@@ -141,3 +164,17 @@
 @color-picker-tab-bg: @ui-bg2;
 @color-picker-tab-bg-active: @ui-bg3;
 @color-picker-tab-text: @ui-fg2;
+
+
+:root {
+    --editor-font-family: Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+}
+
+
+html {
+    font-family: '.SFNSText-Regular', 'SF UI Text', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
+    font-size: 12px;
+    line-height: 1.428571429;
+    color: #d5c4a1;
+    background-color: #282828;
+}
